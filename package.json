@@ -1,0 +1,48 @@
+{
+  "name": "@marcnuri/www.marcnuri.com",
+  "version": "0.0.0",
+  "description": "www.marcnuri.com ",
+  "bin": {
+    "marcnuri.com": "index.js"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf ./public && gatsby build",
+    "dev": "gatsby develop",
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "test": "jest"
+  },
+  "files": [
+    "public"
+  ],
+  "keywords": [],
+  "author": {
+    "name": "Marc Nuri",
+    "url": "https://blog.marcnuri.com"
+  },
+  "license": "Apache-2.0",
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manusa/www.marcnuri.com.git"
+  },
+  "bugs": {
+    "url": "https://github.com/manusa/www.marcnuri.com/issues"
+  },
+  "homepage": "https://github.com/manusa/www.marcnuri.com#readme",
+  "dependencies": {
+    "gatsby": "^2.8.2",
+    "gatsby-plugin-react-helmet": "^3.0.12",
+    "gatsby-plugin-sass": "^2.0.11",
+    "node-sass": "^4.12.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1"
+  }
+}
