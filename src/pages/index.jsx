@@ -1,10 +1,8 @@
 import React from 'react';
-import Layout from '../components/layout';
+import Home from '../components/home';
 
 const Index = () => (
-  <Layout>
-    <p>www.marcnuri.com</p>
-  </Layout>
+  <Home />
 );
 
 export default Index;
