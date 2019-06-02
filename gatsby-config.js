@@ -2,10 +2,10 @@ module.exports = {
   siteMetadata: {
     title: 'www.marcnuri.com - Marc Nuri',
     siteUrl: 'https://www.marcnuri.com',
-    description: 'Software developer',
+    description: 'I craft code',
     social: {
-      twitter: '@MarcNuri',
-    },
+      twitter: '@MarcNuri'
+    }
   },
   plugins: [
     'gatsby-plugin-react-helmet',

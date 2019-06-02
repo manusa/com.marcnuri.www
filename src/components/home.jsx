@@ -1,14 +1,15 @@
 import React from 'react';
+import {FormattedMessage} from 'react-intl';
 import {Helmet} from 'react-helmet';
 import Layout from '../components/layout';
 import '../styles/main.scss';
 
-const Home = () => (
-  <Layout className={'home'}>
+const Home = ({pageContext}) => (
+  <Layout className={'home'} locale={pageContext.locale}>
     <Helmet>
       <meta charSet="UTF-8" />
     </Helmet>
-    <header>
+    <header className={'home__header'}>
       <nav>
         <ul>
           <li>
@@ -20,6 +21,10 @@ const Home = () => (
         </ul>
       </nav>
     </header>
+    <div className={'home__section'}>
+      <p>www.marcnuri.com</p>
+      <FormattedMessage id="Home" />
+    </div>
   </Layout>
 );
 
