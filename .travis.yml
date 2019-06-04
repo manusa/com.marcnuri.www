@@ -1,0 +1,29 @@
+branches:
+  only:
+  - master
+language: node_js
+node_js:
+- '8'
+before_install:
+- npm install
+script:
+- npm run build
+before_deploy:
+- echo "" > "${TRAVIS_BUILD_DIR}"/.gitignore
+- node "${TRAVIS_BUILD_DIR}/replace-dependencies.js"
+deploy:
+- provider: pages
+  skip-cleanup: true
+  github-token: "$GITHUB_TOKEN"
+  keep-history: true
+  local-dir: public
+  on:
+    branch: master
+- provider: npm
+  email: marc@marcnuri.com
+  api_key: "$NPMJS_TOKEN"
+  skip-cleanup: true
+env:
+  global:
+  - secure: XkQDMXcF1lNQq/jsxNi57UtGDINAiTONxc4+fa4gEHjvNC4W8MPrg5XGBIh6axI2XFbpNmc3AxENmatCGUAGL34uiRvZjy0HcrQEs7gy560lRGY6vS9xSgGsprQox9X181zmgVPHvScmMhVjf8aVwi8qkvqXG1BKo9kAaCsF0GuXBqHvoisgy+EyxblcfVXAtv0pvAyJ7ZuM1XhPnq/k2hVi+qy0/UoP7GQpfos+2LB0TkTnHO80UCtDEvpfrxc0u/FcaogtBS605YGPJX4SdPpAnVeIDDjsmE3AVJXINYcRgOtAd6MJyxSnzh0+rBjeuldSiHsJl9miLTiDOrrou5BUsxyORVOpk2lR+hFtQeuuRVXbisS5cUYspa2oojkALleQ9LzAVW/+Hz1VeC2gaepP6R/L9EIVaAPGtyofI/2ibTsf8YPjZWGWUO7S86RRSAW/sejNXC7x1uIFzHjvCSg1ZzCGv9icORmHeSf8nIeeJvBUcR72llPFRpb5hT5wGBPNF9r8dYEKUBVx98AVWfIPQr7PXukSevRoSGCX2cxJqe6MNySkWRD+szyoLyapZgedpBr4/2nrLTTNSm7+IFJeGVg2GMdVIHb0jjJVhsiMDYZZZmfZl5PaLAIh5VKYttQzvEHKqCUBQ676aXRKy70ZrJFkidFVPMqvUUjjL64=
+  - secure: fnHojDC+y77RpRbc6kOW0MLlnWQ0PYydkYaqgWxqHSB3Y5EJ5XmdND5WT73NPxOAy27UvJdga1HdlhKHKqUlpNGfuZJqbbs0SvGhL0w2xtjkt8chLKdgvw1b3D7CO/18tkbgVZ0UbSlzt+5Huf5Z530djAIoJ/aM8QSnAk28cBmLiwXotWaTSF92IHyDTkygXEtJSG1T3W1aQVvrmt4yB4EAJAsAvRV1SRVJfKsNtmVajgTKiQibfOdqtSuFiUjdsVA+To8VkiajJuOwfv+X9IHb23R5d/uXqmzHeW/XLR9Ao4CViMfZPBC3wD/bnzIBuVqbYDzQGDrBEdx09ggclpB0QZWVixjk30dbWF8NT9T33M1iLegwnw2tfrGxqtwXht3wLvN3JJjDI7CLdu6NwnjD5yo4myIwWo/wX6FpthCky//18S7nknrif+CgNhVH4EQHJAqTwE3J+6ycVGYkiD9r1oznrJpxy7qllb4cDXC6ure/d59tBssInIg1pGGA8Q1Ln4zkBQB3MWJtIprLLbHKUDMRHScwZhnA8ISFJQ6Oy76gLex/S71WzNuHyBbMwKkvsRlQ8xsSmCbWgeC59/7mfp0bqX2HGsvmFrtO0RPgUvofhBEaDdUjM3ZT3ehHcAyBEtYnPHhIeKeI46sDaW5qcaICIrwLLnK/sebKjw0=
