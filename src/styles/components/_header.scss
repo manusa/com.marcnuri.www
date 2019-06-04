@@ -1,0 +1,96 @@
+@import '../base/variables';
+
+$transition-time: 250ms;
+$padding: 16px;
+$color: white;
+$scrolled-background: white;
+$scrolled-color: #333;
+
+
+.header {
+  $self: &;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 48px;
+  line-height: 48px;
+  transition: background $transition-time ease-in-out 0s, box-shadow $transition-time ease-in-out 0s;
+  font-family: $header-font-family;
+  font-weight: $header-font-weight;
+  font-size: $header-font-size;
+  color: $color;
+
+  &#{$self}--scrolled {
+    background: $scrolled-background;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 1px 4px 0px;
+    color: $scrolled-color;
+  }
+
+  & &__title {
+    $parent: &;
+    margin-left: $padding;
+
+    & #{$self}__title-long,
+    & #{$self}__title-short {
+      transition: opacity $transition-time ease-in-out 0s, margin $transition-time ease-in-out 0s;
+    }
+    & #{$self}__title-long {
+      $parent: &;
+      opacity: 1;
+      margin: 0;
+      @at-root #{$self}--scrolled#{$parent} {
+        opacity: 0;
+        margin-right: -0.5em;
+        font-family: 'Inconsolata';
+        font-weight: normal;
+      }
+    }
+    & #{$self}__title-short {
+      $parent: &;
+      opacity: 0;
+      margin-right: -0.5em;
+      @at-root #{$self}--scrolled#{$parent} {
+        opacity: 1;
+        margin: 0;
+      }
+    }
+  }
+
+  & &__nav-bar {
+    margin-left: auto;
+    margin-right: $padding;
+
+    & #{$self}__nav-bar-list,
+    & #{$self}__nav-bar-item {
+      margin: 0;
+      padding: 0;
+    }
+    & #{$self}__nav-bar-item {
+      list-style: none;
+      display: inline;
+      & #{$self}__nav-bar-item-link {
+        $parent: &;
+        text-decoration: none;
+        outline: none;
+        color: $color;
+        font-weight: normal;
+        @at-root #{$self}--scrolled#{$parent} {
+          color: $scrolled-color;
+        }
+      }
+      //a, a:hover, a:active {
+      //  $parent: &;
+      //  text-decoration: none;
+      //  outline: none;
+      //  color: $color;
+      //  font-weight: normal;
+      //  @at-root #{$self}--scrolled & {
+      //    color: $scrolled-color;
+      //  }
+      //}
+    }
+  }
+}

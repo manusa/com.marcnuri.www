@@ -9,22 +9,14 @@ const Home = ({pageContext}) => (
     <Helmet>
       <meta charSet="UTF-8" />
     </Helmet>
-    <header className={'home__header'}>
-      <nav>
-        <ul>
-          <li>
-            <a href="https://www.linkedin.com/in/marcnuri">LinkedIn</a>
-          </li>
-          <li>
-            <a href="https://blog.marcnuri.com">Blog</a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <div className={'home__section'}>
-      <p>www.marcnuri.com</p>
+    <section className={'home__section home__cover'}>
+      <div className={'home__cover-filter'}>
+        <p>www.marcnuri.com</p>
+      </div>
+    </section>
+    <section className={'home__section'}>
       <FormattedMessage id="Home" />
-    </div>
+    </section>
   </Layout>
 );
 
