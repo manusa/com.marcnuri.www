@@ -20,7 +20,7 @@
 
   & &__cover {
     $parent: &;
-    background: #fce1d8 url('./assets/mount-bromo.jpg') no-repeat center top;
+    background: #fce1d8 url('./assets/mount-bromo-low.jpg') no-repeat center top;
     background-size: cover;
     & #{$self}__cover-filter {
       background: rgba(28, 10, 2, 0.45);

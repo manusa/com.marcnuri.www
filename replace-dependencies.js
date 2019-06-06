@@ -10,5 +10,5 @@ if (fs.existsSync(PACKAGE_JSON_PATH)) {
     express: '^4.16.4'
   };
   fs.writeFileSync(PACKAGE_JSON_PATH, JSON.stringify(packageJson));
-  console.log('Dependencies succesfully replaced');
+  console.log('Dependencies successfully replaced');
 }
