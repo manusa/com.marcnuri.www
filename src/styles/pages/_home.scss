@@ -1,5 +1,7 @@
 @import '../base/variables';
 
+$about-background: white;
+
 .home {
   $self: &;
   position: absolute;
@@ -30,5 +32,23 @@
       align-items: center;
       justify-content: center;
     }
+    &#{$self}__cover--office {
+      background: #544d47 url('./assets/office-low.jpg') no-repeat center top;
+      background-size: cover;
+      & #{$self}__cover-filter {
+        background: rgba(4, 4, 4, 0.45);
+      }
+    }
+    &#{$self}__cover--trail {
+      background: #398755 url('./assets/trail-low.jpg') no-repeat right top;
+      background-size: cover;
+      & #{$self}__cover-filter {
+        background: rgba(9, 26, 13, 0.45);
+      }
+    }
+  }
+  & &__about {
+    background: $about-background;
+    padding-top: $header-height;
   }
 }
