@@ -42,6 +42,7 @@ class Home extends React.Component {
     return (
       <Layout className={'home'} locale={pageContext.locale}>
         <Seo
+          lang={pageContext.locale}
           title={intl.formatMessage({id: 'home.title'})}
           description={intl.formatMessage({id: 'home.subtitle'})}/>
         <section className={`home__section home__cover ${coverClassName}`}>
