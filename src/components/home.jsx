@@ -1,7 +1,7 @@
 import React from 'react';
-import {FormattedMessage} from 'react-intl';
-import {Helmet} from 'react-helmet';
-import Layout from '../components/layout';
+import {FormattedMessage, injectIntl} from 'react-intl';
+import Layout from './layout';
+import Seo from './seo/seo';
 import '../styles/main.scss';
 
 const coverClass = () => {
@@ -20,11 +20,11 @@ const coverClass = () => {
   return ret;
 };
 
-const Home = ({pageContext}) => (
+const Home = ({pageContext, intl}) => (
   <Layout className={'home'} locale={pageContext.locale}>
-    <Helmet>
-      <meta charSet="UTF-8" />
-    </Helmet>
+    <Seo
+      title={intl.formatMessage({id: 'home.title'})}
+      description={intl.formatMessage({id: 'home.subtitle'})} />
     <section className={`home__section home__cover ${coverClass()}`}>
       <div className={'home__cover-filter'}>
         <p>www.marcnuri.com</p>
@@ -37,4 +37,4 @@ const Home = ({pageContext}) => (
   </Layout>
 );
 
-export default Home;
+export default injectIntl(Home);
