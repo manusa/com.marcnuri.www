@@ -47,14 +47,14 @@ $about-background: white;
       justify-content: center;
     }
     &#{$self}__cover--office {
-      background: transparent url('./assets/office-low.jpg') no-repeat center top;
+      background: #544d47 url('./assets/office-low.jpg') no-repeat center top;
       background-size: cover;
       & #{$self}__cover-filter {
         background: rgba(4, 4, 4, 0.45);
       }
     }
     &#{$self}__cover--trail {
-      background: transparent url('./assets/trail-low.jpg') no-repeat right top;
+      background: #398755 url('./assets/trail-low.jpg') no-repeat right top;
       background-size: cover;
       & #{$self}__cover-filter {
         background: rgba(9, 26, 13, 0.45);
