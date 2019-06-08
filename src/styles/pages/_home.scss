@@ -19,7 +19,8 @@ $about-background: white;
     z-index:-1;
     content:  url('./assets/mount-bromo-low.jpg')
     url('./assets/office-low.jpg')
-    url('./assets/trail-low.jpg');
+    url('./assets/trail-low.jpg')
+    url('./assets/trail-lowest.jpg');
   }
 
   .header {
@@ -60,7 +61,9 @@ $about-background: white;
       }
     }
     &#{$self}__cover--trail {
-      background: #398755 url('./assets/trail-low.jpg') no-repeat right top;
+      background: url('./assets/trail-low.jpg') no-repeat right top,
+                  url('./assets/trail-lowest.jpg') no-repeat right top;
+      background-color: #544d47;
       background-size: cover;
       & #{$self}__cover-filter {
         background: rgba(9, 26, 13, 0.45);
