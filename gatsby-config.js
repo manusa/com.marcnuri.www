@@ -16,6 +16,12 @@ module.exports = {
           require('path').resolve(__dirname, 'node_modules')
         ]
       }
+    },
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'UA-1509094-4'
+      }
     }
   ]
 };
