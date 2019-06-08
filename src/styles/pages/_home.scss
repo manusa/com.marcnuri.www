@@ -10,6 +10,17 @@ $about-background: white;
   margin: 0;
   padding: 0;
   background: $color-blue;
+  &::after {
+    /** Image Preload **/
+    position:absolute;
+    width:0;
+    height:0;
+    overflow:hidden;
+    z-index:-1;
+    content:  url('./assets/mount-bromo-low.jpg')
+    url('./assets/office-low.jpg')
+    url('./assets/trail-low.jpg');
+  }
 
   .header {
     z-index: 1;
@@ -24,6 +35,9 @@ $about-background: white;
     $parent: &;
     background: #fce1d8 url('./assets/mount-bromo-low.jpg') no-repeat center top;
     background-size: cover;
+    position: relative;
+    overflow: hidden;
+
     & #{$self}__cover-filter {
       background: rgba(28, 10, 2, 0.45);
       height: 100%;
@@ -33,18 +47,25 @@ $about-background: white;
       justify-content: center;
     }
     &#{$self}__cover--office {
-      background: #544d47 url('./assets/office-low.jpg') no-repeat center top;
+      background: transparent url('./assets/office-low.jpg') no-repeat center top;
       background-size: cover;
       & #{$self}__cover-filter {
         background: rgba(4, 4, 4, 0.45);
       }
     }
     &#{$self}__cover--trail {
-      background: #398755 url('./assets/trail-low.jpg') no-repeat right top;
+      background: transparent url('./assets/trail-low.jpg') no-repeat right top;
       background-size: cover;
       & #{$self}__cover-filter {
         background: rgba(9, 26, 13, 0.45);
       }
+    }
+
+    & #{$self}__cover-hello {
+      font-family: 'Poppins';
+      color: white;
+      font-size: 8rem;
+      word-break: break-all;
     }
   }
   & &__about {
