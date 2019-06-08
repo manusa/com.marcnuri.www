@@ -33,18 +33,24 @@ $about-background: white;
 
   & &__cover {
     $parent: &;
-    background: #fce1d8 url('./assets/mount-bromo-low.jpg') no-repeat center top;
-    background-size: cover;
+    background: black;
     position: relative;
     overflow: hidden;
 
     & #{$self}__cover-filter {
-      background: rgba(28, 10, 2, 0.45);
+      background: transparent;
       height: 100%;
       width: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+    &#{$self}__cover--java-bromo {
+      background: #fce1d8 url('./assets/mount-bromo-low.jpg') no-repeat center top;
+      background-size: cover;
+      & #{$self}__cover-filter {
+        background: rgba(28, 10, 2, 0.45);
+      }
     }
     &#{$self}__cover--office {
       background: #544d47 url('./assets/office-low.jpg') no-repeat center top;

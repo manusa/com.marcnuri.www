@@ -7,7 +7,7 @@ import '../styles/main.scss';
 const isBrowser = () => typeof window !== 'undefined';
 
 const coverClass = () => {
-  let ret = '';
+  let ret = 'home__cover--java-bromo';
   if (isBrowser()) {
     const now = new Date();
     const hour = now.getHours();
