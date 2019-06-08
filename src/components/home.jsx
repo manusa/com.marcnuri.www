@@ -1,5 +1,6 @@
 import React from 'react';
 import {FormattedMessage, injectIntl} from 'react-intl';
+import Avatar from './avatar/avatar';
 import Layout from './layout';
 import Seo from './seo/seo';
 import '../styles/main.scss';
@@ -53,13 +54,13 @@ class Home extends React.Component {
           </div>
         </section>
         <section className={'home__section home__about'}>
-          <h1>Marc Nuri</h1>
-          <h2><FormattedMessage id="home.subtitle"/></h2>
+          <Avatar alt={intl.formatMessage({id: 'home.title'})}/>
+          <h1 className={'home__about-title'}>Marc Nuri</h1>
+          <h2 className={'home__about-subtitle'}><FormattedMessage id="home.subtitle"/></h2>
         </section>
       </Layout>
     );
   }
-
 }
 
 export default injectIntl(Home);

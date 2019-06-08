@@ -1,6 +1,9 @@
 @import '../base/variables';
 
-$about-background: white;
+$about-background: #78bcda;
+$avatar-size: 150px;
+$avatar-background: #649bb7;
+
 
 .home {
   $self: &;
@@ -73,12 +76,42 @@ $about-background: white;
     & #{$self}__cover-hello {
       font-family: 'Poppins';
       color: white;
-      font-size: 8rem;
+      font-size: 6rem;
       word-break: break-all;
+      @media screen and (min-width: $responsive-breakpoint-tablet-min) {
+        font-size: 8rem;
+      }
     }
   }
   & &__about {
+    $parent: &;
     background: $about-background;
     padding-top: $header-height;
+    height: auto;
+    color: #3c5e6d;
+    font-family: 'Montserrat';
+    & #{$self}__about-title {
+      margin: 0;
+      color: #2f2739;
+      font-size: 2.5rem;
+      text-align: center;
+    }
+    & #{$self}__about-subtitle {
+      margin: 0;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+    .avatar {
+      $parent: &;
+      margin: 0 auto;
+      width: $avatar-size;
+      height: $avatar-size;
+      border-radius: 50%;
+      background: $avatar-background;
+      @at-root  #{$parent}__image {
+        max-width: 100%;
+        border-radius: 50%;
+      }
+    }
   }
 }

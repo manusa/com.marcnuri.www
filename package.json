@@ -1,6 +1,6 @@
 {
   "name": "@marcnuri/www.marcnuri.com",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "www.marcnuri.com ",
   "bin": {
     "marcnuri.com": "index.js"
