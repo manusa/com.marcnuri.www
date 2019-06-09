@@ -71,6 +71,9 @@ $scrolled-color: #333;
     & #{$self}__nav-bar-item {
       list-style: none;
       display: inline;
+      &:not(:first-child) {
+        margin-left: 12px;
+      }
       & #{$self}__nav-bar-item-link {
         $parent: &;
         text-decoration: none;
