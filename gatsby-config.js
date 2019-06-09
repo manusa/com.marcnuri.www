@@ -30,6 +30,12 @@ module.exports = {
       options: {
         serialize: sitemap.serializer
       }
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        policy: [{userAgent: '*', allow: '/'}]
+      }
     }
   ]
 };
