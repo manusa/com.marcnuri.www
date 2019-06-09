@@ -23,6 +23,7 @@ const SeoWithMetadata = ({data, lang, title, description, image}) => {
       {image && (<meta name="image" content={image} />)}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
+      <meta property="og:url" content={siteMetadata.siteUrl} />
       {image && (<meta property="og:image" content={image} />)}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content={siteMetadata.social.twitter} />
