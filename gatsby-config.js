@@ -37,6 +37,17 @@ module.exports = {
       options: {
         policy: [{userAgent: '*', allow: '/'}]
       }
+    },
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        short_name: 'Marc Nuri',
+        start_url: '/',
+        background_color: '#78bcda',
+        theme_color: '#78bcda',
+        display: 'browser',
+        icon: 'src/components/avatar/face-512-t.png'
+      }
     }
   ]
 };

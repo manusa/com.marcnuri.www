@@ -8,7 +8,7 @@ const FooterWithMetadata = ({data, pageContext}) => (
     <div className={'footer__locale'}>
       <ul>
         {Object.values(locales).map(locale =>
-          (<li><Link
+          (<li key={locale.path}><Link
             to={locale.default ? pageContext.pagePath : `${locale.path}${pageContext.pagePath}`}>
             {locale.name}
           </Link></li>)
