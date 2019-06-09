@@ -102,6 +102,10 @@ $avatar-background: #649bb7;
       font-size: 1.5rem;
       text-align: center;
     }
+    & #{$self}__about-content {
+      max-width: 996px;
+      margin: 0 auto;
+    }
     .avatar {
       $parent: &;
       margin: 0 auto;
