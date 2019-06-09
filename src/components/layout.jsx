@@ -3,15 +3,16 @@ import PropTypes from 'prop-types';
 import Header from './header/header';
 import Footer from './footer/footer';
 
-const Layout = ({className, children}) => (
+const Layout = ({pageContext, className, children}) => (
   <div className={className}>
-    <Header />
+    <Header pageContext={pageContext} />
     {children}
-    <Footer />
+    <Footer pageContext={pageContext} />
   </div>
 );
 
 Layout.propTypes = {
+  pageContext: PropTypes.object.isRequired,
   className: PropTypes.string
 };
 

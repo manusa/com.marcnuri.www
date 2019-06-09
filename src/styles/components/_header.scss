@@ -33,6 +33,7 @@ $scrolled-color: #333;
   & &__title {
     $parent: &;
     margin-left: $header-padding;
+    cursor: pointer;
 
     & #{$self}__title-long,
     & #{$self}__title-short {

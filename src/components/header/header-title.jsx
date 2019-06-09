@@ -9,7 +9,7 @@ const L = ({children}) => (
 );
 
 const HeaderTitle = () => (
-  <span>
+  <span onClick={() => window.scrollTo(0, 0)}>
     <S>&lt;</S>
     M
     <L>a</L>

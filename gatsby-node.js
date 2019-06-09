@@ -7,7 +7,11 @@ exports.onCreatePage = async ({page, actions}) => {
     const path = locale.default ? page.path : `${locale.path}${page.path}`;
     createPage({...page,
       path,
-      context: {...page.context, locale: key}
+      context: {...page.context,
+        locale: key,
+        pagePath: page.path,
+        localizedPath: path
+      }
     });
   });
 };

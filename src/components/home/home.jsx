@@ -49,7 +49,7 @@ class Home extends React.Component {
     const {pageContext, intl} = this.props;
     const {coverClassName} = this.state;
     return (
-      <Layout className={'home'} locale={pageContext.locale}>
+      <Layout className={'home'} pageContext={pageContext}>
         <Seo
           lang={pageContext.locale}
           title={`${
