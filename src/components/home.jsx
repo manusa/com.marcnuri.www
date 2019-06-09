@@ -15,7 +15,7 @@ const coverClass = () => {
     const day = now.getDay();
     if (day > 0 && day < 6 && hour > 8 && hour < 19) {
       ret = 'home__cover--office';
-    } else if (day > 5) {
+    } else if (day === 0 || day === 6) {
       ret = 'home__cover--trail';
     }
   }
