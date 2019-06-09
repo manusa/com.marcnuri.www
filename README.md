@@ -4,8 +4,9 @@
 
 ### Inspiration
 
-- [Max Stoiber](https://mxstbr.com/)
+- [Sean Halpin](http://seanhalpin.io/)
 - [Sindre Sorhus](https://sindresorhus.com/)
+- [Max Stoiber](https://mxstbr.com/)
 
 ### Images
 

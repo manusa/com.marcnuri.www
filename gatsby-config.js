@@ -1,3 +1,5 @@
+const sitemap = require('./sitemap');
+
 module.exports = {
   siteMetadata: {
     title: 'www.marcnuri.com - Marc Nuri',
@@ -21,6 +23,12 @@ module.exports = {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
         trackingId: 'UA-1509094-4'
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        serialize: sitemap.serializer
       }
     }
   ]

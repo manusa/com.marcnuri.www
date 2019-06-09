@@ -88,16 +88,17 @@ $avatar-background: #649bb7;
     background: $about-background;
     padding-top: $header-height;
     height: auto;
-    color: #3c5e6d;
+    color: #2f2739;
     font-family: 'Montserrat';
     & #{$self}__about-title {
       margin: 0;
-      color: #2f2739;
+      color: white;
       font-size: 2.5rem;
       text-align: center;
     }
     & #{$self}__about-subtitle {
       margin: 0;
+      color: #3c5e6d;
       font-size: 1.5rem;
       text-align: center;
     }
