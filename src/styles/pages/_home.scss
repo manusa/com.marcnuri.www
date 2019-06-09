@@ -1,8 +1,9 @@
 @import '../base/variables';
 
-$about-background: #78bcda;
+$about-background: $color-blue;
+$about-padding: 32px;
 $avatar-size: 150px;
-$avatar-background: #649bb7;
+$avatar-background: $color-blue-dark;
 
 
 .home {
@@ -86,9 +87,9 @@ $avatar-background: #649bb7;
   & &__about {
     $parent: &;
     background: $about-background;
-    padding-top: $header-height;
+    padding: #{$about-padding + $header-height} 0 $about-padding 0;
     height: auto;
-    color: #2f2739;
+    color: $color-blue-darkest;
     font-family: 'Montserrat';
     & #{$self}__about-title {
       margin: 0;
@@ -97,14 +98,16 @@ $avatar-background: #649bb7;
       text-align: center;
     }
     & #{$self}__about-subtitle {
-      margin: 0;
-      color: #3c5e6d;
+      margin: 0 $about-padding;
+      color: $color-blue-darker;
       font-size: 1.5rem;
       text-align: center;
     }
     & #{$self}__about-content {
       max-width: 996px;
       margin: 0 auto;
+      padding: 0 $about-padding;
+      text-align: justify;
     }
     .avatar {
       $parent: &;

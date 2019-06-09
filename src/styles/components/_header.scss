@@ -1,7 +1,6 @@
 @import '../base/variables';
 
 $transition-time: 250ms;
-$padding: 16px;
 $color: white;
 $scrolled-background: white;
 $scrolled-color: #333;
@@ -17,7 +16,9 @@ $scrolled-color: #333;
   justify-content: center;
   height: $header-height;
   line-height: $header-height;
-  transition: background $transition-time ease-in-out 0s, box-shadow $transition-time ease-in-out 0s;
+  transition: background $transition-time ease-in-out 0s,
+              box-shadow $transition-time ease-in-out 0s,
+              color $transition-time ease-in-out 0s;
   font-family: $header-font-family;
   font-weight: $header-font-weight;
   font-size: $header-font-size;
@@ -31,7 +32,7 @@ $scrolled-color: #333;
 
   & &__title {
     $parent: &;
-    margin-left: $padding;
+    margin-left: $header-padding;
 
     & #{$self}__title-long,
     & #{$self}__title-short {
@@ -61,7 +62,7 @@ $scrolled-color: #333;
 
   & &__nav-bar {
     margin-left: auto;
-    margin-right: $padding;
+    margin-right: $header-padding;
 
     & #{$self}__nav-bar-list,
     & #{$self}__nav-bar-item {

@@ -5,6 +5,10 @@ $header-font-weight: 600;
 
 // Colors
 $color-blue: #78bcda;
+$color-blue-dark: #649bb7;
+$color-blue-darker: #3c5e6d;
+$color-blue-darkest: #2f2739;
+
 
 // Responsive
 $responsive-breakpoint-tablet-min: 600px;
@@ -12,4 +16,7 @@ $responsive-breakpoint-tablet-min: 600px;
 // Base
 $base-background-color: #d9dadb;
 $base-font-size: 16px;
+$header-padding: 16px;
 $header-height: 48px;
+$footer-padding: 16px;
+$footer-background: #333333;

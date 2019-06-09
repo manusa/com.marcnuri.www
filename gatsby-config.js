@@ -2,8 +2,9 @@ const sitemap = require('./sitemap');
 
 module.exports = {
   siteMetadata: {
-    title: 'www.marcnuri.com - Marc Nuri',
+    title: 'Marc Nuri',
     siteUrl: 'https://www.marcnuri.com',
+    year: 2019,
     description: 'I craft code',
     social: {
       twitter: '@MarcNuri'
