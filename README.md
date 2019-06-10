@@ -4,6 +4,7 @@
 
 ### Inspiration
 
+- [Matt Farley](http://mattfarley.ca/)
 - [Sean Halpin](http://seanhalpin.io/)
 - [Sindre Sorhus](https://sindresorhus.com/)
 - [Max Stoiber](https://mxstbr.com/)

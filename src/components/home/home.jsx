@@ -2,6 +2,7 @@ import React from 'react';
 import {FormattedMessage, injectIntl} from 'react-intl';
 import ReactMarkdown from 'react-markdown';
 import Avatar from '../avatar/avatar';
+import face512 from '../avatar/face-512.png';
 import Layout from '../layout';
 import Seo from '../seo/seo';
 import aboutEn from 'raw-loader!./about.en.md';
@@ -57,7 +58,9 @@ class Home extends React.Component {
           }, ${
             intl.formatMessage({id: 'home.subtitle'})
           }`}
-          description={intl.formatMessage({id: 'home.subtitle'})}/>
+          description={intl.formatMessage({id: 'global.meta.description'})}
+          image={face512}
+        />
         <section className={`home__section home__cover ${coverClassName}`}>
           <div className={'home__cover-filter'}>
             <h3 className={'home__cover-hello'}>
