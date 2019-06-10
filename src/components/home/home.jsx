@@ -22,9 +22,12 @@ const coverClass = () => {
     const now = new Date();
     const hour = now.getHours();
     const day = now.getDay();
-    if (day > 0 && day < 6 && hour > 8 && hour < 19) {
+    const weekday = day > 0 && day < 6;
+    if (weekday && hour > 8 && hour < 19) {
       ret = 'home__cover--office';
-    } else if (day === 0 || day === 6) {
+    } else if ((weekday && hour === 8) || (weekday && hour === 19)) {
+      ret = 'home__cover--subway';
+    } else if (!weekday) {
       ret = 'home__cover--trail';
     }
   }

@@ -64,6 +64,13 @@ $avatar-background: $color-blue-dark;
         background: rgba(4, 4, 4, 0.45);
       }
     }
+    &#{$self}__cover--subway {
+      background: #544d47 url('./assets/subway-java-low.jpg') no-repeat center top;
+      background-size: cover;
+      & #{$self}__cover-filter {
+        background: rgba(4, 4, 4, 0.55);
+      }
+    }
     &#{$self}__cover--trail {
       background: url('./assets/trail-low.jpg') no-repeat right top,
                   url('./assets/trail-lowest.jpg') no-repeat right top;
