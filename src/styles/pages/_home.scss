@@ -2,6 +2,7 @@
 
 $about-background: $color-blue;
 $about-padding: 32px;
+$about-spacing: 16px;
 $avatar-size: 150px;
 $avatar-background: $color-blue-dark;
 
@@ -91,26 +92,39 @@ $avatar-background: $color-blue-dark;
       }
     }
   }
-  & &__about {
+  & &__avatar-section {
     $parent: &;
     background: $about-background;
-    padding: #{$about-padding + $header-height} 0 $about-padding 0;
+    padding: $about-padding 0;
     height: auto;
     color: $color-blue-darkest;
     font-family: 'Montserrat';
-    & #{$self}__about-title {
-      margin: 0;
+    font-size: 1rem;
+    line-height: 1.5rem;
+
+    a, a:active, a:hover {
+      text-decoration: none;
+      color: $color-blue-darkest;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    & #{$self}__avatar-section-title {
+      margin: 0 0 $about-spacing 0;
       color: white;
       font-size: 2.5rem;
+      line-height: 3rem;
       text-align: center;
     }
-    & #{$self}__about-subtitle {
+    & #{$self}__avatar-section-subtitle {
       margin: 0 $about-padding;
       color: $color-blue-darker;
       font-size: 1.5rem;
+      line-height: 2rem;
       text-align: center;
     }
-    & #{$self}__about-content {
+    & #{$self}__avatar-section-content {
       max-width: 996px;
       margin: 0 auto;
       padding: 0 $about-padding;
@@ -118,7 +132,7 @@ $avatar-background: $color-blue-dark;
     }
     .avatar {
       $parent: &;
-      margin: 0 auto;
+      margin: 0 auto $about-spacing auto;
       width: $avatar-size;
       height: $avatar-size;
       border-radius: 50%;
@@ -127,6 +141,14 @@ $avatar-background: $color-blue-dark;
         max-width: 100%;
         border-radius: 50%;
       }
+    }
+  }
+  & &__about {
+    padding-top: #{$about-padding + $header-height};
+  }
+  & &__contact {
+    .avatar {
+      background-color: $color-blue-darkest;
     }
   }
 }

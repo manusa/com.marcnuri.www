@@ -3,15 +3,23 @@ import {FormattedMessage, injectIntl} from 'react-intl';
 import ReactMarkdown from 'react-markdown';
 import Avatar from '../avatar/avatar';
 import face512 from '../avatar/face-512.png';
+import faceWithLaptop from '../avatar/face-laptop.png';
 import Layout from '../layout';
 import Seo from '../seo/seo';
 import aboutEn from 'raw-loader!./about.en.md';
 import aboutEs from 'raw-loader!./about.es.md';
+import contactEn from 'raw-loader!./contact.en.md';
+import contactEs from 'raw-loader!./contact.es.md';
 import '../../styles/main.scss';
 
 const ABOUT_CONTENT = {
   en: aboutEn,
   es: aboutEs
+};
+
+const CONTACT_CONTENT = {
+  en: contactEn,
+  es: contactEs
 };
 
 const isBrowser = () => typeof window !== 'undefined';
@@ -71,13 +79,22 @@ class Home extends React.Component {
             </h3>
           </div>
         </section>
-        <section className={'home__section home__about'}>
+        <section className={'home__section home__avatar-section home__about'}>
           <Avatar alt={intl.formatMessage({id: 'home.title'})}/>
-          <h1 className={'home__about-title'}>Marc Nuri</h1>
-          <h2 className={'home__about-subtitle'}><FormattedMessage id="home.subtitle"/></h2>
+          <h1 className={'home__avatar-section-title'}>Marc Nuri</h1>
+          <h2 className={'home__avatar-section-subtitle'}><FormattedMessage id="home.subtitle"/></h2>
           <ReactMarkdown
-            className={'home__about-content'}
+            className={'home__avatar-section-content'}
             source={ABOUT_CONTENT[pageContext.locale]}
+          />
+        </section>
+        <section className={'home__section home__avatar-section home__contact'}>
+          <Avatar alt={intl.formatMessage({id: 'home.title'})} face={faceWithLaptop}/>
+          <h2 className={'home__avatar-section-subtitle'}><FormattedMessage id="home.lendAHand"/></h2>
+          <ReactMarkdown
+            className={'home__avatar-section-content'}
+            source={CONTACT_CONTENT[pageContext.locale]}
+            linkTarget="_blank"
           />
         </section>
       </Layout>

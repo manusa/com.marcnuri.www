@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import defaultFace from './face.png';
 
 const Avatar = ({face = defaultFace, alt}) => (
@@ -6,5 +7,14 @@ const Avatar = ({face = defaultFace, alt}) => (
     <img className={'avatar__image'} src={face} alt={alt} />
   </div>
 );
+
+Avatar.propTypes = {
+  alt: PropTypes.string.isRequired,
+  face: PropTypes.object
+};
+
+Avatar.defaultProps = {
+  face: defaultFace
+};
 
 export default Avatar;
