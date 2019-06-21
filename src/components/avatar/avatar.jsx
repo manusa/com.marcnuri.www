@@ -10,7 +10,7 @@ const Avatar = ({face = defaultFace, alt}) => (
 
 Avatar.propTypes = {
   alt: PropTypes.string.isRequired,
-  face: PropTypes.object
+  face: PropTypes.string
 };
 
 Avatar.defaultProps = {
