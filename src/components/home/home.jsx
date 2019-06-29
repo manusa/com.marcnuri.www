@@ -12,6 +12,7 @@ import aboutEs from 'raw-loader!./about.es.md';
 import contactEn from 'raw-loader!./contact.en.md';
 import contactEs from 'raw-loader!./contact.es.md';
 import locales from '../../i18n/locales';
+import {localizedPath} from '../../i18n/path';
 import '../../styles/main.scss';
 
 const ABOUT_CONTENT = {
@@ -83,7 +84,7 @@ class Home extends React.Component {
               <ul>
                 {Object.values(locales).map(locale =>
                   (<li key={locale.path}><Link
-                    to={locale.default ? pageContext.pagePath : `${locale.path}${pageContext.pagePath}`}>
+                    to={localizedPath(locale)(pageContext.pagePath)}>
                     {locale.path}
                   </Link></li>)
                 )}

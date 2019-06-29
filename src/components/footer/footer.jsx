@@ -1,6 +1,7 @@
 import React from 'react';
 import {StaticQuery, graphql, Link} from 'gatsby';
 import locales from '../../i18n/locales';
+import {localizedPath} from '../../i18n/path';
 import '../../styles/main.scss';
 
 const FooterWithMetadata = ({data, pageContext}) => (
@@ -9,7 +10,7 @@ const FooterWithMetadata = ({data, pageContext}) => (
       <ul>
         {Object.values(locales).map(locale =>
           (<li key={locale.path}><Link
-            to={locale.default ? pageContext.pagePath : `${locale.path}${pageContext.pagePath}`}>
+            to={localizedPath(locale)(pageContext.pagePath)}>
             {locale.name}
           </Link></li>)
         )}
