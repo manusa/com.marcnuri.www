@@ -33,7 +33,7 @@ const createStaticRoutes = site => {
 const serializer = ({site, allSitePage}) => {
   const entries = [];
   entries.push(...createRegularEntries({site, allSitePage}));
-  entries.push(...createStaticRoutes(site))
+  entries.push(...createStaticRoutes(site));
   return entries;
 };
 

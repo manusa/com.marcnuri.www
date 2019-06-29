@@ -51,7 +51,7 @@ class Home extends React.Component {
   }
 
   componentDidMount() {
-    // setState shiuldn't be here
+    // setState shouldn't be here
     // on purpose to force re-render in browser only (Gatsby)
     this.setState({coverClassName: coverClass()});
   }
