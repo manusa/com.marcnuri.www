@@ -1,8 +1,9 @@
 @import '../base/variables';
 
+$default-spacing: 16px;
 $about-background: $color-blue;
 $about-padding: 32px;
-$about-spacing: 16px;
+$about-spacing: $default-spacing;
 $avatar-size: 150px;
 $avatar-background: $color-blue-dark;
 
@@ -89,6 +90,29 @@ $avatar-background: $color-blue-dark;
       word-break: break-all;
       @media screen and (min-width: $responsive-breakpoint-tablet-min) {
         font-size: 8rem;
+      }
+    }
+    & #{$self}__cover-locale {
+      position: absolute;
+      bottom: $default-spacing;
+      right: $default-spacing;
+      ul {
+        margin: 0;
+        padding: 0;
+      }
+      li {
+        display: inline-block;
+        a {
+          color: white;
+          text-decoration: none;
+          text-transform: uppercase;
+        }
+        &:not(:first-child) {
+          &::before {
+            content: '|';
+            margin: 0 $default-spacing / 2;
+          }
+        }
       }
     }
   }

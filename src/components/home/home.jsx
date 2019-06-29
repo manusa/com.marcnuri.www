@@ -1,5 +1,6 @@
 import React from 'react';
 import {FormattedMessage, injectIntl} from 'react-intl';
+import {Link} from 'gatsby';
 import ReactMarkdown from 'react-markdown';
 import Avatar from '../avatar/avatar';
 import face512 from '../avatar/face-512.png';
@@ -10,6 +11,7 @@ import aboutEn from 'raw-loader!./about.en.md';
 import aboutEs from 'raw-loader!./about.es.md';
 import contactEn from 'raw-loader!./contact.en.md';
 import contactEs from 'raw-loader!./contact.es.md';
+import locales from '../../i18n/locales';
 import '../../styles/main.scss';
 
 const ABOUT_CONTENT = {
@@ -77,6 +79,16 @@ class Home extends React.Component {
             <h3 className={'home__cover-hello'}>
               <FormattedMessage id="home.hello"/>
             </h3>
+            <div className={'home__cover-locale'}>
+              <ul>
+                {Object.values(locales).map(locale =>
+                  (<li key={locale.path}><Link
+                    to={locale.default ? pageContext.pagePath : `${locale.path}${pageContext.pagePath}`}>
+                    {locale.path}
+                  </Link></li>)
+                )}
+              </ul>
+            </div>
           </div>
         </section>
         <section className={'home__section home__avatar-section home__about'}>
