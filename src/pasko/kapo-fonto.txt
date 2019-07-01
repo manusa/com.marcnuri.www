@@ -41,6 +41,6 @@ If you're really interested in checking out the source code please visit:
 
 http://github.com/manusa/com.marcnuri.www
 
-BTW, if you like what you see maybe you can press star the github repo or even follow me
+BTW, if you like what you see maybe you can star the github repo or even follow me
 
 
