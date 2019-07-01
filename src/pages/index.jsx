@@ -1,5 +1,5 @@
 import React from 'react';
-import Bunny from '../components/easter/Bunny';
+import Bunny from '../components/easter/bunny';
 import Home from '../components/home/home';
 
 const Index = props => (
