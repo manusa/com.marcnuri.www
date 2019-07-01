@@ -1,30 +1,46 @@
 
 
-
-Congratulations! You've reached the real Marc Nuri's personal site
-(The other version is just smoke and mirrors)
-
-
-                                  ..---..
-                                .'  _    `.
-                            __..'  (o)    :
-                           `..__          ;
-                                `.       /
-                                  ;      `..---...___
-                                .'                   `~-. .-')
-                               .                         ' _.'
-                              :                           :
-                              \                           '
-                               M                         N
-                                `._                   _.'
-                                   `~--....___...---~'
+ .d88888b.                             888      888
+d88P" "Y88b                            888      888
+888     888                            888      888
+888     888 888  888  8888b.   .d8888b 888  888 888
+888     888 888  888     "88b d88P"    888 .88P 888
+888 Y8b 888 888  888 .d888888 888      888888K  Y8P
+Y88b.Y8b88P Y88b 888 888  888 Y88b.    888 "88b  "
+ "Y888888"   "Y88888 "Y888888  "Y8888P 888  888 888
+       Y8b
 
 
 
 
-If you're really interested in checking the source code
-please visit http://github.com/manusa/com.marcnuri.www
 
-BTW, if you like what you see you can press that star thingy icon in github or maybe you can follow me
+                                         ..---..
+                                       .'  _    `.
+                                   __..'  (o)    :
+                                  `..__          ;
+                                       `.       /
+                                         ;      `..---...___
+                                       .'                   `~-. .-')
+                                      .                         ' _.'
+                                     :                           :
+                                     \                           '
+                                      M                         N
+                                       `._                   _.'
+                                          `~--....___...---~'
+
+
+
+
+
+You've just reached the real Marc Nuri's personal site (The other version is just smoke and mirrors)
+
+
+
+
+If you're really interested in checking out the source code please visit:
+
+http://github.com/manusa/com.marcnuri.www
+
+BTW, if you like what you see maybe you can press star the github repo or even follow me
 
 
