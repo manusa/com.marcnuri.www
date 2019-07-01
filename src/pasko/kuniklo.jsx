@@ -1,6 +1,6 @@
 import React, {useEffect, useRef} from 'react';
 
-const Bunny = ({comment}) => {
+const Kuniklo = ({comment}) => {
   const bunnyRef = useRef();
   useEffect(() => {
     bunnyRef.current.outerHtml = `<!-- ${comment} -->`;
@@ -10,4 +10,4 @@ const Bunny = ({comment}) => {
     dangerouslySetInnerHTML={{__html: `<!-- ${comment} -->`}}/>;
 };
 
-export default Bunny;
+export default Kuniklo;

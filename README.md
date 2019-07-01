@@ -6,6 +6,7 @@
 
 - [Matt Farley](http://mattfarley.ca/)
 - [Sean Halpin](http://seanhalpin.io/)
+- [Samy Kamkar](https://samy.pl/)
 - [Sindre Sorhus](https://sindresorhus.com/)
 - [Max Stoiber](https://mxstbr.com/)
 
