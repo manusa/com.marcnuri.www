@@ -14,17 +14,18 @@ const SeoWithMetadata = ({data, lang, title, description, image}) => {
       alternateName: siteMetadata.title
     }
   ];
+  const imageUrl = image && `${siteMetadata.siteUrl}${image}`;
   return (
     <Helmet>
       <meta charSet="UTF-8" />
       <html lang={lang} />
       <title>{title}</title>
       <meta name="description" content={description} />
-      {image && (<meta name="image" content={image} />)}
+      {imageUrl && (<meta name="image" content={imageUrl} />)}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={siteMetadata.siteUrl} />
-      {image && (<meta property="og:image" content={image} />)}
+      {imageUrl && (<meta property="og:image" content={imageUrl} />)}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content={siteMetadata.social.twitter} />
       <meta name="twitter:title" content={title} />
