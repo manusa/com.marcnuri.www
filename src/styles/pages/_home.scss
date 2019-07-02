@@ -53,7 +53,9 @@ $avatar-background: $color-blue-dark;
       justify-content: center;
     }
     &#{$self}__cover--java-bromo {
-      background: #fce1d8 url('./assets/mount-bromo-low.jpg') no-repeat center top;
+      background: url('./assets/mount-bromo-low.jpg') no-repeat center top,
+                  url('./assets/mount-bromo-lowest.jpg') no-repeat center top;
+      background-color: #fce1d8;
       background-size: cover;
       & #{$self}__cover-filter {
         background: rgba(28, 10, 2, 0.45);
@@ -69,7 +71,9 @@ $avatar-background: $color-blue-dark;
       }
     }
     &#{$self}__cover--subway {
-      background: #544d47 url('./assets/subway-java-low.jpg') no-repeat center top;
+      background: url('./assets/subway-java-low.jpg') no-repeat center top,
+      url('./assets/subway-java-lowest.jpg') no-repeat center top;
+      background-color: #544d47;
       background-size: cover;
       & #{$self}__cover-filter {
         background: rgba(4, 4, 4, 0.55);
