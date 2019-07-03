@@ -38,8 +38,10 @@ const SeoWithMetadata = ({data, lang, title, description, image, pageContext}) =
         />)
       )}
       <meta property="og:title" content={title} />
+      <meta property="og:type" content="profile" />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={siteMetadata.siteUrl} />
+      <meta property="og:locale" content={lang} />
       {imageUrl && (<meta property="og:image" content={imageUrl} />)}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:creator" content={siteMetadata.social.twitter} />
