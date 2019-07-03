@@ -2,8 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {StaticQuery, graphql} from 'gatsby';
 import {Helmet} from 'react-helmet';
+import omit from 'lodash/omit';
+import values from 'lodash/values';
+import locales from '../../i18n/locales';
+import {localizedPath} from '../../i18n/path';
 
-const SeoWithMetadata = ({data, lang, title, description, image}) => {
+const SeoWithMetadata = ({data, lang, title, description, image, pageContext}) => {
   const {site: {siteMetadata}} = data;
   const schemaOrgJsonLd = [
     {
@@ -11,9 +15,12 @@ const SeoWithMetadata = ({data, lang, title, description, image}) => {
       '@type': 'WebSite',
       url: siteMetadata.siteUrl,
       name: title,
-      alternateName: siteMetadata.title
+      author: siteMetadata.author,
+      alternateName: siteMetadata.title,
+      inLanguage: lang
     }
   ];
+  const alternateLocales = omit(locales, lang);
   const imageUrl = image && `${siteMetadata.siteUrl}${image}`;
   return (
     <Helmet>
@@ -22,6 +29,14 @@ const SeoWithMetadata = ({data, lang, title, description, image}) => {
       <title>{title}</title>
       <meta name="description" content={description} />
       {imageUrl && (<meta name="image" content={imageUrl} />)}
+      {values(alternateLocales).map(locale =>
+        (<link
+          key={locale.path}
+          rel="alternate"
+          hreflang={locale.language}
+          href={localizedPath(locale)(pageContext.pagePath)}
+        />)
+      )}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={siteMetadata.siteUrl} />
@@ -30,7 +45,7 @@ const SeoWithMetadata = ({data, lang, title, description, image}) => {
       <meta name="twitter:creator" content={siteMetadata.social.twitter} />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
+      {imageUrl && (<meta name="twitter:image" content={imageUrl} />)}
       <script type="application/ld+json">
         {JSON.stringify(schemaOrgJsonLd)}
       </script>
@@ -62,7 +77,10 @@ Seo.propTypes = {
   lang: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  image: PropTypes.string
+  image: PropTypes.string,
+  pageContext: PropTypes.shape({
+    pagePath: PropTypes.string.isRequired
+  }).isRequired
 };
 
 Seo.defaultProps = {

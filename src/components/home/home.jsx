@@ -66,6 +66,7 @@ class Home extends React.Component {
     return (
       <Layout className={'home'} pageContext={pageContext}>
         <Seo
+          pageContext={pageContext}
           lang={pageContext.locale}
           title={`${
             intl.formatMessage({id: 'home.title'})

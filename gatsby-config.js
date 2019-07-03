@@ -6,6 +6,7 @@ module.exports = {
     siteUrl: 'https://www.marcnuri.com',
     year: 2019,
     description: 'I craft code',
+    author: 'Marc Nuri',
     social: {
       twitter: '@MarcNuri'
     }
