@@ -91,6 +91,8 @@ $avatar-background: $color-blue-dark;
 
     & #{$self}__cover-hello {
       font-family: 'Poppins';
+      padding: 0;
+      margin: 0;
       color: white;
       font-size: 6rem;
       word-break: break-all;
@@ -105,8 +107,7 @@ $avatar-background: $color-blue-dark;
       bottom: 0;
       left: 6rem;
       line-height: 6rem;
-      padding: 0;
-      margin: 0;
+      width: 100%;
       transform: rotate(-90deg) ;
       transform-origin: bottom left;
       opacity: 0.5;
