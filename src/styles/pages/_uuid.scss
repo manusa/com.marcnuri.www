@@ -1,0 +1,50 @@
+@import '../base/variables';
+
+$title-height: $header-height * 6;
+.uuid {
+  $self: &;
+  background: $color-blue;
+  color: $color-blue-darkest;
+
+  & &__title {
+    margin: 0;
+    color: white;
+    background: url('./assets/valves-low.jpg') no-repeat center center;
+    background-size: cover;
+    & #{$self}__title-filter {
+      display: flex;
+      align-items: center;
+      background: rgba(33, 7, 6, 0.4);
+      height: $title-height;
+      & #{$self}__title-text {
+        margin: 0;
+        padding: 0 $base-padding;
+      }
+    }
+  }
+  & &__parameters {
+    padding: $base-padding;
+  }
+  & &__result {
+    padding: 0 $base-padding;
+    & #{$self}__result-container {
+      margin: 0;
+      box-sizing: border-box;
+      width: 100%;
+      min-height: 5em;
+    }
+  }
+  & &__about {
+    padding: $base-padding;
+    h2 {
+      color: $color-blue-darker;
+    }
+    a, a:active, a:hover {
+      text-decoration: none;
+      color: white;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}

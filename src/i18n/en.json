@@ -3,5 +3,17 @@
   "home.title": "Marc Nuri",
   "home.subtitle": "Trying to change the world one line of code at a time",
   "home.hello": "HELLO.",
-  "home.lendAHand": "Can I lend you a hand?"
+  "home.lendAHand": "Can I lend you a hand?",
+  "uuid.title": "UUID / GUID Online key generator",
+  "uuid.meta.description": "Generate universally unique identifiers (UUID / GUID) individually or in bulk with lots of options",
+  "uuid.form.Amount": "Amount",
+  "uuid.form.UpperCase": "Upper case",
+  "uuid.form.Braces": "Braces \\{\\}",
+  "uuid.form.Hyphens": "Hyphens",
+  "uuid.form.Separator": "Separator",
+  "uuid.form.Separator.NewLine": "New Line",
+  "uuid.form.Separator.Colon": "Colon",
+  "uuid.form.Separator.Semicolon": "Semicolon",
+  "uuid.form.Separator.Pipe": "Pipe",
+  "uuid.form.Generate": "Generate"
 }
