@@ -9,6 +9,9 @@ module.exports = {
     author: 'Marc Nuri',
     social: {
       twitter: '@MarcNuri'
+    },
+    api: {
+      uuid: '/api/uuid'
     }
   },
   plugins: [

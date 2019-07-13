@@ -2,7 +2,6 @@ const locales = require('./src/i18n/locales');
 
 const STATIC_ROUTES = [
   'adr-online',
-  'uuid',
   'iban'
 ];
 
