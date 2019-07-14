@@ -1,4 +1,5 @@
 import React from 'react';
+import {navigate} from 'gatsby';
 
 const S = ({children}) => (
   <span className={'header__title-short'}>{children}</span>
@@ -8,8 +9,17 @@ const L = ({children}) => (
   <span className={'header__title-long'}>{children}</span>
 );
 
+const onClickHeaderTitle = () => {
+  const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+  if (scrollTop > 0) {
+    window.scrollTo(0, 0);
+  } else {
+    navigate('/');
+  }
+};
+
 const HeaderTitle = () => (
-  <span onClick={() => window.scrollTo(0, 0)}>
+  <span onClick={onClickHeaderTitle}>
     <S>&lt;</S>
     M
     <L>a</L>

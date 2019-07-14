@@ -3,14 +3,20 @@ import {injectIntl} from 'react-intl';
 import ReactMarkdown from 'react-markdown';
 import Paper from '@material-ui/core/Paper';
 import {createMuiTheme, withStyles} from '@material-ui/core/styles';
-import {ThemeProvider} from '@material-ui/styles';
+import ThemeProvider from '@material-ui/styles/ThemeProvider';
 import Form from './form';
 import face512 from '../../components/avatar/face-512.png';
 import Layout from '../../components/layout';
 import Seo from '../../components/seo/seo';
 import uuidEn from 'raw-loader!./uuid.en.md';
 import uuidEs from 'raw-loader!./uuid.es.md';
-import {fetchUuids, toJson, processUuids} from '../services';
+import {
+  fetchUuids,
+  toJson,
+  processUuids,
+  MAX_QUANTITY,
+  MIN_QUANTITY
+} from '../services';
 
 const CONTENT = {
   en: uuidEn,
@@ -45,6 +51,7 @@ class Uuid extends React.Component {
         hyphens: true,
         separator: '\n'
       },
+      loading: false,
       result: ''
     };
   }
@@ -80,14 +87,30 @@ class Uuid extends React.Component {
   }
 
   async onGenerate() {
-    const uuids = await fetchUuids(this.state.formValues.amount).then(toJson);
-    const result = processUuids(uuids)(this.state.formValues);
-    this.setState({result});
+    const {formValues} = this.state;
+    let {formValues: {amount}} = this.state;
+    if (amount > MAX_QUANTITY) {
+      amount = MAX_QUANTITY;
+      this.setState({formValues: {amount: MAX_QUANTITY}});
+    } else if (amount < MIN_QUANTITY) {
+      amount = MIN_QUANTITY;
+    }
+    this.setState({
+      loading: true,
+      formValues: {...formValues, amount}
+    });
+    try {
+      const uuids = await fetchUuids(amount).then(toJson);
+      const result = processUuids(uuids)(this.state.formValues);
+      this.setState({result});
+    } finally {
+      this.setState({loading: false});
+    }
   }
 
   render() {
     const {pageContext, intl, classes} = this.props;
-    const {formValues, result} = this.state;
+    const {formValues, loading, result} = this.state;
     const title = intl.formatMessage({id: 'uuid.title'});
     return (
       <Layout className="uuid" pageContext={pageContext}>
@@ -108,6 +131,7 @@ class Uuid extends React.Component {
             <Paper className={classes.root}>
               <Form
                 values={formValues}
+                loading={loading}
                 result={result}
                 onFieldChange={this.handleOnFieldChange}
                 onGenerateClick={this.handleOnGenerate}

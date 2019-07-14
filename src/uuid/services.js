@@ -1,5 +1,8 @@
 import gatsbyConfig from '../../gatsby-config';
 
+export const MAX_QUANTITY = 20000;
+export const MIN_QUANTITY = 1;
+
 export const fetchUuids = async (quantity = 1) => {
   const url = new URL(`${gatsbyConfig.siteMetadata.siteUrl}${gatsbyConfig.siteMetadata.api.uuid}`);
   url.search = new URLSearchParams({quantity}).toString();

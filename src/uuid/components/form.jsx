@@ -1,11 +1,13 @@
 import React from 'react';
 import {injectIntl} from 'react-intl';
 import PropTypes from 'prop-types';
+import {withStyles} from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import FormControl from '@material-ui/core/FormControl';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import Grid from '@material-ui/core/Grid';
 import InputLabel from '@material-ui/core/InputLabel';
+import LinearProgress from '@material-ui/core/LinearProgress';
 import Select from '@material-ui/core/Select';
 import Switch from '@material-ui/core/Switch';
 import TextField from '@material-ui/core/TextField';
@@ -19,7 +21,20 @@ const selectAll = event => {
   }
 };
 
-const Form = ({intl, values, result, onFieldChange, onGenerateClick}) =>
+const ResultTextArea = withStyles({
+  notchedOutline: {
+    borderTopWidth: 0,
+    borderTopLeftRadius: 0,
+    borderTopRightRadius: 0
+  }
+})(({classes, ...props}) =>
+  <TextField
+    className={classes.root}
+    InputProps={{classes: {notchedOutline: classes.notchedOutline}}}
+    {...props}
+  />);
+
+const Form = ({intl, values, loading, result, onFieldChange, onGenerateClick}) =>
   (
     <Grid container spacing={3}>
       <Grid item xs={12} sm={6}>
@@ -28,9 +43,11 @@ const Form = ({intl, values, result, onFieldChange, onGenerateClick}) =>
           value={values.amount}
           onChange={onFieldChange}
           label={intl.formatMessage({id: 'uuid.form.Amount'})}
+          inputProps={{
+            min: '1',
+            max: '20000'
+          }}
           type='number'
-          min='1'
-          max='20000'
           fullWidth
         />
       </Grid>
@@ -99,12 +116,14 @@ const Form = ({intl, values, result, onFieldChange, onGenerateClick}) =>
         </Button>
       </Grid>
       <Grid item xs={12}>
-        <TextField
+        <LinearProgress
+          variant={loading === true ? 'indeterminate' : 'determinate'}
+        />
+        <ResultTextArea
           id="result"
           value={result}
           inputProps={{
-            onMouseOver: selectAll,
-            onMouseDown: selectAll
+            onMouseOver: selectAll
           }}
           multiline
           fullWidth
@@ -124,6 +143,7 @@ Form.propTypes = {
     hyphens: PropTypes.bool,
     separator: PropTypes.string
   }),
+  loading: PropTypes.bool.isRequired,
   result: PropTypes.string,
   onFieldChange: PropTypes.func.isRequired,
   onGenerateClick: PropTypes.func.isRequired
