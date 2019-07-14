@@ -1,0 +1,14 @@
+[Unit]
+Description=com.marcnuri.uuid Microservice
+After=docker.service
+Wants=network-online.target docker.socket firewalld.service
+Requires=docker.socket
+
+[Service]
+Restart=always
+ExecStartPre=/bin/bash -c "/usr/bin/docker container inspect com.marcnuri.uuid 2> /dev/null || /usr/bin/docker run -d --name com.marcnuri.uuid -p 127.0.0.1:8082:8080 -e ALLOWED_ORIGINS=	http://localhost:8000 --rm marcnuri/com.marcnuri.uuid"
+ExecStart=/usr/bin/docker start -a postgresql
+ExecStop=/usr/bin/docker stop -t 10 postgresql
+
+[Install]
+WantedBy=multi-user.target
