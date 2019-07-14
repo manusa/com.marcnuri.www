@@ -1,6 +1,9 @@
 import React from 'react';
 import {injectIntl} from 'react-intl';
 import ReactMarkdown from 'react-markdown';
+import Paper from '@material-ui/core/Paper';
+import {createMuiTheme, withStyles} from '@material-ui/core/styles';
+import {ThemeProvider} from '@material-ui/styles';
 import Form from './form';
 import face512 from '../../components/avatar/face-512.png';
 import Layout from '../../components/layout';
@@ -14,13 +17,26 @@ const CONTENT = {
   es: uuidEs
 };
 
+const THEME = createMuiTheme({
+  spacing: 4,
+  palette: {
+    type: 'dark',
+    primary: {main: '#78bcda'},
+    secondary: {main: '#7ea896'}
+  }
+});
+
+const STYLES = theme => ({
+  root: {
+    padding: theme.spacing(3, 2)
+  }
+});
+
 class Uuid extends React.Component {
   constructor(props) {
     super(props);
     this.handleOnFieldChange = this.onFieldChange.bind(this);
     this.handleOnGenerate = this.onGenerate.bind(this);
-    this.resultRef = React.createRef();
-    this.handleOnResultMouseOver = this.onResultMouseOver.bind(this);
     this.state = {
       formValues: {
         amount: 1,
@@ -60,16 +76,8 @@ class Uuid extends React.Component {
     this.setState({result});
   }
 
-  onResultMouseOver() {
-    const textArea = this.resultRef.current;
-    if (textArea) {
-      this.resultRef.current.select();
-      this.resultRef.current.focus();
-    }
-  }
-
   render() {
-    const {pageContext, intl} = this.props;
+    const {pageContext, intl, classes} = this.props;
     const {formValues, result} = this.state;
     const title = intl.formatMessage({id: 'uuid.title'});
     return (
@@ -86,21 +94,17 @@ class Uuid extends React.Component {
             <h1 className={'uuid__title-text'}>{title}</h1>
           </div>
         </div>
-        <section className="uuid__parameters">
-          <Form
-            values={formValues}
-            onFieldChange={this.handleOnFieldChange}
-            onGenerateClick={this.handleOnGenerate}
-          />
-        </section>
-        <section className="uuid__result">
-          <textarea
-            ref={this.resultRef}
-            value={result}
-            readOnly
-            className="uuid__result-container"
-            onMouseOver={this.handleOnResultMouseOver}
-          />
+        <section className="uuid__form">
+          <ThemeProvider theme={THEME}>
+            <Paper className={classes.root}>
+              <Form
+                values={formValues}
+                result={result}
+                onFieldChange={this.handleOnFieldChange}
+                onGenerateClick={this.handleOnGenerate}
+              />
+            </Paper>
+          </ThemeProvider>
         </section>
         <section className="uuid__about" >
           <ReactMarkdown
@@ -113,4 +117,4 @@ class Uuid extends React.Component {
   }
 }
 
-export default injectIntl(Uuid);
+export default injectIntl(withStyles(STYLES)(Uuid));

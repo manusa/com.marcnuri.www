@@ -1,4 +1,3 @@
-import {fetch} from 'whatwg-fetch';
 import gatsbyConfig from '../../gatsby-config';
 
 export const fetchUuids = async (quantity = 1) => {

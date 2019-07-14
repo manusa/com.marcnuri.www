@@ -40,6 +40,7 @@
   },
   "homepage": "https://github.com/manusa/www.marcnuri.com#readme",
   "dependencies": {
+    "@material-ui/core": "^4.2.0",
     "gatsby": "^2.8.2",
     "gatsby-plugin-google-analytics": "^2.0.20",
     "gatsby-plugin-manifest": "^2.1.1",
@@ -53,7 +54,7 @@
     "react-helmet": "^5.2.1",
     "react-intl": "^2.9.0",
     "react-markdown": "^4.0.8",
-    "whatwg-fetch": "^3.0.0"
+    "whatwg-fetch": "^2.0.4"
   },
   "devDependencies": {
     "eslint-plugin-jest": "^22.6.4",
