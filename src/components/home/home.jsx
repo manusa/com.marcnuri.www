@@ -59,7 +59,6 @@ class Home extends React.Component {
     this.setState({coverClassName: coverClass()});
   }
 
-
   render() {
     const {pageContext, intl} = this.props;
     const {coverClassName} = this.state;

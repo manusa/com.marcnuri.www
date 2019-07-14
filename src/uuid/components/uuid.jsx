@@ -49,6 +49,16 @@ class Uuid extends React.Component {
     };
   }
 
+  componentDidMount() {
+    this.handleOnGenerate();
+    // Forces generation in first browser render (Gatsby's static markup)
+    window.addEventListener('load', this.handleOnGenerate);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('load', this.handleOnGenerate);
+  }
+
   onFieldChange(event) {
     event.persist();
     const formValues = {...this.state.formValues};
@@ -69,8 +79,7 @@ class Uuid extends React.Component {
     this.setState({formValues});
   }
 
-  async onGenerate(event) {
-    event.preventDefault();
+  async onGenerate() {
     const uuids = await fetchUuids(this.state.formValues.amount).then(toJson);
     const result = processUuids(uuids)(this.state.formValues);
     this.setState({result});
