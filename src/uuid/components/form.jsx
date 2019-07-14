@@ -19,8 +19,8 @@ const selectAll = event => {
   }
 };
 
-const Form = ({intl, values, result, onFieldChange, onGenerateClick}) => {
-  return (
+const Form = ({intl, values, result, onFieldChange, onGenerateClick}) =>
+  (
     <Grid container spacing={3}>
       <Grid item xs={12} sm={6}>
         <TextField
@@ -114,7 +114,6 @@ const Form = ({intl, values, result, onFieldChange, onGenerateClick}) => {
       </Grid>
     </Grid>
   );
-};
 
 Form.propTypes = {
   intl: PropTypes.object,
