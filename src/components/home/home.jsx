@@ -67,7 +67,7 @@ class Home extends React.Component {
       <Layout className={'home'} pageContext={pageContext}>
         <Seo
           pageContext={pageContext}
-          lang={pageContext.locale}
+          lang={pageContext.lang}
           title={`${
             intl.formatMessage({id: 'home.title'})
           }, ${
@@ -99,7 +99,7 @@ class Home extends React.Component {
           <h2 className={'home__avatar-section-subtitle'}><FormattedMessage id="home.subtitle"/></h2>
           <ReactMarkdown
             className={'home__avatar-section-content'}
-            source={ABOUT_CONTENT[pageContext.locale]}
+            source={ABOUT_CONTENT[pageContext.lang]}
           />
         </section>
         <section className={'home__section home__avatar-section home__contact'}>
@@ -107,7 +107,7 @@ class Home extends React.Component {
           <h2 className={'home__avatar-section-subtitle'}><FormattedMessage id="home.lendAHand"/></h2>
           <ReactMarkdown
             className={'home__avatar-section-content'}
-            source={CONTACT_CONTENT[pageContext.locale]}
+            source={CONTACT_CONTENT[pageContext.lang]}
             linkTarget="_blank"
           />
         </section>

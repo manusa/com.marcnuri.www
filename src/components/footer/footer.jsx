@@ -19,17 +19,19 @@ const FooterWithMetadata = ({data, pageContext}) => (
     <div className={'footer__deprecated'}>
       <ul>
         <li><a href={'https://www.marcnuri.com/adr-online'}>ADR Online</a></li>
-        <li><a href={'https://www.marcnuri.com/uuid'}>UUID</a></li>
+        <li><Link to={localizedPath(pageContext.locale)('/uuid')}>
+          UUID
+        </Link></li>
         <li><a href={'https://www.marcnuri.com/iban'}>IBAN</a></li>
       </ul>
     </div>
     <div className={'footer__social'}>
       <ul>
-        <li><a href={'https://www.linkedin.com/in/marcnuri'}>LinkedIn</a></li>
-        <li><a href={'https://www.github.com/manusa'}>GitHub</a></li>
-        <li><a href={'https://www.twitter.com/MarcNuri'}>Twitter</a></li>
-        <li><a href={'https://blog.marcnuri.com'}>Blog</a></li>
-        <li><a href={'https://presentations.marcnuri.com'}>Talks</a></li>
+        <li><a href={'https://www.linkedin.com/in/marcnuri'} rel="noreferrer">LinkedIn</a></li>
+        <li><a href={'https://www.github.com/manusa'} rel="noreferrer">GitHub</a></li>
+        <li><a href={'https://www.twitter.com/MarcNuri'} rel="noreferrer">Twitter</a></li>
+        <li><a href={'https://blog.marcnuri.com'} rel="noreferrer">Blog</a></li>
+        <li><a href={'https://presentations.marcnuri.com'} rel="noreferrer">Talks</a></li>
       </ul>
     </div>
     <div className={'footer__copyright'}>

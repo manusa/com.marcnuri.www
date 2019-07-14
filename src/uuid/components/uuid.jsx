@@ -84,7 +84,7 @@ class Uuid extends React.Component {
       <Layout className="uuid" pageContext={pageContext}>
         <Seo
           pageContext={pageContext}
-          lang={pageContext.locale}
+          lang={pageContext.lang}
           title={title}
           description={intl.formatMessage({id: 'uuid.meta.description'})}
           image={face512}
@@ -108,7 +108,7 @@ class Uuid extends React.Component {
         </section>
         <section className="uuid__about" >
           <ReactMarkdown
-            source={CONTENT[pageContext.locale]}
+            source={CONTENT[pageContext.lang]}
             linkTarget="_blank"
           />
         </section>

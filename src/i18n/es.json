@@ -8,7 +8,7 @@
   "uuid.meta.description": "Genera identificadores únicos universales (UUID / GUID) de forma individual o por lotes con múltiples opciones",
   "uuid.form.Amount": "Cantidad",
   "uuid.form.UpperCase": "Mayúsculas",
-  "uuid.form.Braces": "Llaves \\{\\}",
+  "uuid.form.Braces": "Llaves",
   "uuid.form.Hyphens": "Guiones",
   "uuid.form.Separator": "Separador",
   "uuid.form.Separator.NewLine": "Nueva Línea",

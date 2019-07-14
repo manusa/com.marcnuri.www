@@ -77,7 +77,7 @@ const Form = ({intl, values, result, onFieldChange, onGenerateClick}) =>
               onChange={onFieldChange}
             />
           }
-          label={intl.formatMessage({id: 'uuid.form.Braces'})}
+          label={`${intl.formatMessage({id: 'uuid.form.Braces'})} {}`}
         />
       </Grid>
       <Grid item>

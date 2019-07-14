@@ -9,7 +9,8 @@ exports.onCreatePage = async ({page, actions}) => {
     createPage({...page,
       path,
       context: {...page.context,
-        locale: key,
+        locale,
+        lang: key,
         pagePath: page.path,
         localizedPath: path
       }

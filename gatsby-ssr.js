@@ -5,9 +5,9 @@ const kapo = require('./src/pasko/kapo');
 const fostoKorpo = require('./src/pasko/fosto-korpo');
 
 exports.wrapPageElement = ({element, props}) => {
-  const {pageContext: {locale}} = props;
+  const {pageContext: {lang}} = props;
   return (
-    <IntlProvider locale={locale} messages={messages[locale]}>
+    <IntlProvider locale={lang} messages={messages[lang]}>
       {element}
     </IntlProvider>);
 };
