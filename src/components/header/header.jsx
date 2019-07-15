@@ -4,10 +4,10 @@ import HeaderTitle from './header-title';
 import {IconItem} from './header-items';
 import '../../styles/main.scss';
 
-const Header = ({scrolled}) => (
+const Header = ({pageContext, scrolled}) => (
   <header className={`header${scrolled ? ' header--scrolled' : ''}`}>
     <div className={'header__title'}>
-      <HeaderTitle />
+      <HeaderTitle pageContext={pageContext} />
     </div>
     <nav className={'header__nav-bar'}>
       <ul className={'header__nav-bar-list'}>
@@ -37,7 +37,8 @@ const Header = ({scrolled}) => (
 );
 
 Header.propTypes = {
-  scrolled: PropTypes.bool.isRequired,
+  pageContext: PropTypes.object.isRequired,
+  scrolled: PropTypes.bool.isRequired
 };
 
 
