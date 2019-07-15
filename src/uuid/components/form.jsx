@@ -111,13 +111,14 @@ const Form = ({intl, values, loading, result, onFieldChange, onGenerateClick}) =
         />
       </Grid>
       <Grid container justify="flex-end">
-        <Button color="primary" onClick={onGenerateClick}>
+        <Button color="primary" disabled={loading} onClick={onGenerateClick}>
           {intl.formatMessage({id: 'uuid.form.Generate'})}
         </Button>
       </Grid>
       <Grid item xs={12}>
         <LinearProgress
           variant={loading === true ? 'indeterminate' : 'determinate'}
+          value={100}
         />
         <ResultTextArea
           id="result"

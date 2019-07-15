@@ -27,14 +27,15 @@ $title-height: $header-height * 6;
   }
   & &__about {
     padding: $base-padding;
-    h2 {
+    h2, h3 {
       color: $color-blue-darker;
     }
     a, a:active, a:hover {
       text-decoration: none;
-      color: white;
+      color: $color-blue-light;
     }
     a:hover {
+      color: white;
       text-decoration: underline;
     }
   }
