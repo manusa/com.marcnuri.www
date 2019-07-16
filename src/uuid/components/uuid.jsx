@@ -23,6 +23,10 @@ const CONTENT = {
   es: uuidEs
 };
 
+const Link = ({href, children}) => (
+  <a href={href} target={'_blank'} rel="noreferrer noopener">{children}</a>
+);
+
 const THEME = createMuiTheme({
   spacing: 4,
   palette: {
@@ -143,6 +147,9 @@ class Uuid extends React.Component {
           <ReactMarkdown
             source={CONTENT[pageContext.lang]}
             linkTarget="_blank"
+            renderers={{
+              link: Link
+            }}
           />
         </section>
       </Layout>
