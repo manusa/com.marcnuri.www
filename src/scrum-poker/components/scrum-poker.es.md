@@ -20,7 +20,7 @@ Esta es una versión online de la baraja de cartas para la estimación de tareas
 3. Cuándo todas las estimaciones estén listas, agita tu dispositivo/teléfono para revelar tu carta
 4. Pulsa sobre la carta para volver a comenzar
 
-### Dispositivos que no soportan eventos "device motion2
+### Dispositivos que no soportan eventos "device motion"
 
 Es posible que tu dispositivo no soporte la funcionalidad HTML 5 para detectar si se está moviendo.
 En ese caso, simplemente pulsa sobre el reverso de la carta para revelar su valor.
