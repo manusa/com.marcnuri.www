@@ -4,6 +4,7 @@ $title-height: $header-height * 4;
 $poker-aspect-ratio: 140%;
 $poker-border-radius: 3%;
 $poker-default-width: 150px;
+$poker-background-color: #0b2853;
 @mixin poker-margin($margin) {
   position: absolute;
   top: $margin;
@@ -15,6 +16,7 @@ $poker-default-width: 150px;
 
 .scrum-poker {
   $self: &;
+  background: $color-blue;
   & &__title {
     margin: 0;
     color: white;
@@ -32,12 +34,9 @@ $poker-default-width: 150px;
     }
   }
   & &__deck {
-    background: $color-blue;
     overflow-x: auto;
     & #{$self}__deck-cards {
       display: flex;
-      //flex-wrap: wrap;
-      //justify-content: space-around;
       &::before {
         content: '';
         min-width: 8px;
@@ -58,6 +57,8 @@ $poker-default-width: 150px;
       }
     }
   }
+  & &__about {
+  }
   & &__selected-card {
     display: none;
     position: fixed;
@@ -70,7 +71,7 @@ $poker-default-width: 150px;
     }
     & .poker-card {
       margin: auto;
-      max-width: 100%;
+      max-width: 71.4vh;
     }
   }
   & .poker-card {
@@ -89,10 +90,10 @@ $poker-default-width: 150px;
         left: 0;
         right: 0;
         border-radius: $poker-border-radius;
+        user-select: none;
       }
     }
     @at-root #{$parent}.poker-card--flipped  {
-      $poker-background-color: #0b2853;
       & .poker-card__card {
         background: white;
         & .poker-card__outer-border {
@@ -112,9 +113,18 @@ $poker-default-width: 150px;
     }
     @at-root #{$parent}.poker-card--front {
       & .poker-card__card {
-        background: white;
-        & .poker-card__column-container {
+        background: $color-blue-darkest;
+        & .poker-card__background {
           @include poker-margin(3%);
+          background: white;
+          & .poker-card__inner-background {
+            @include poker-margin(13%);
+            border-radius: 3%;
+            background: $color-blue-darkest;
+          }
+        }
+        & .poker-card__column-container {
+          @include poker-margin(5%);
           display: flex;
           flex-direction: column;
           justify-content: space-between;
@@ -122,10 +132,17 @@ $poker-default-width: 150px;
           & .poker-card__row-bottom {
             display: flex;
             justify-content: space-between;
+            & .poker-card__symbol {
+              width: 25%;
+            }
+          }
+          & .poker-card__row-bottom .poker-card__symbol {
+            transform: rotate(180deg);
           }
           & .poker-card__row-middle {
             margin: 0 auto;
-            width: 50%;
+            width: 70%;
+            fill: white;
           }
         }
       }

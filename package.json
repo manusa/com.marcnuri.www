@@ -1,6 +1,6 @@
 {
   "name": "@marcnuri/www.marcnuri.com",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "www.marcnuri.com ",
   "bin": {
     "marcnuri.com": "index.js"
@@ -8,8 +8,8 @@
   "main": "index.js",
   "scripts": {
     "build": "rm -rf ./public && gatsby build",
-    "dev": "gatsby develop",
-    "develop": "gatsby develop",
+    "dev": "gatsby develop --host=0.0.0.0",
+    "develop": "gatsby develop --host=0.0.0.0",
     "start": "npm run develop",
     "test": "jest"
   },
