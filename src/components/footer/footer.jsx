@@ -18,6 +18,9 @@ const FooterWithMetadata = ({data, pageContext}) => (
     </div>
     <div className={'footer__deprecated'}>
       <ul>
+        <li><Link to={localizedPath(pageContext.locale)('/scrum-poker-online')}>
+          Scrum Poker
+        </Link></li>
         <li><a href={'https://www.marcnuri.com/adr-online'}>ADR Online</a></li>
         <li><Link to={localizedPath(pageContext.locale)('/uuid')}>
           UUID

@@ -8,3 +8,17 @@ body {
   font-family: $base-font-family;
   font-size: $base-font-size;
 }
+
+.markdown-section {
+  h2, h3 {
+    color: $color-blue-darker;
+  }
+  a, a:active, a:hover {
+    text-decoration: none;
+    color: $color-blue-light;
+  }
+  a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+}

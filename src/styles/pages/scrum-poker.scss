@@ -58,6 +58,7 @@ $poker-background-color: #0b2853;
     }
   }
   & &__about {
+    padding: $base-padding;
   }
   & &__selected-card {
     display: none;

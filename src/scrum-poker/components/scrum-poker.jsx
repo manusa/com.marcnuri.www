@@ -1,21 +1,30 @@
 import React from 'react';
 import clsx from 'clsx';
+import ReactMarkdown from 'react-markdown';
 import {injectIntl} from 'react-intl';
+import ExternalLink from '../../components/external-link';
 import Layout from '../../components/layout';
 import Seo from '../../components/seo/seo';
 import PokerCardBack from './poker-card-back';
 import PokerCardFront from './poker-card-front';
 import shiver from '../shiver';
+import scrumPokerEn from 'raw-loader!./scrum-poker.en.md';
+import scrumPokerEs from 'raw-loader!./scrum-poker.es.md';
 import '../../styles/main.scss';
 import '../../styles/pages/scrum-poker.scss';
+
+const CONTENT = {
+  en: scrumPokerEn,
+  es: scrumPokerEs
+};
+
 
 class ScrumPoker extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       selectedCard: null,
-      flipped: true,
-      debugInfo: null
+      flipped: true
     };
     this.handleFlipCard = this.flipCard.bind(this);
     this.shiver = shiver(this.onShake.bind(this));
@@ -28,7 +37,8 @@ class ScrumPoker extends React.Component {
     });
   }
 
-  flipCard() {
+  flipCard(event) {
+    event.stopPropagation();
     this.setState({
       flipped: !this.state.flipped
     });
@@ -44,14 +54,6 @@ class ScrumPoker extends React.Component {
   componentDidMount() {
     if (window.DeviceMotionEvent) {
       window.addEventListener('devicemotion', this.shiver);
-      window.addEventListener('devicemotion', event => {
-        this.setState({
-          debugInfo: `
-Acceleration X: ${event.acceleration.x} m/s2
-Acceleration Y: ${event.acceleration.y} m/s2
-        `
-        });
-      });
     }
   }
 
@@ -61,7 +63,7 @@ Acceleration Y: ${event.acceleration.y} m/s2
 
   render() {
     const {pageContext, intl} = this.props;
-    const {selectedCard, flipped, debugInfo} = this.state;
+    const {selectedCard, flipped} = this.state;
     const title = intl.formatMessage({id: 'scrum.poker.title'});
     const description = intl.formatMessage({id: 'scrum.poker.meta.description'});
     return (
@@ -88,16 +90,21 @@ Acceleration Y: ${event.acceleration.y} m/s2
               )}
           </div>
         </section>
-        <section className={'scrum-poker__about'}>
-          <pre>
-            {debugInfo}
-          </pre>
-          Play!
+        <section className={'scrum-poker__about markdown-section'}>
+          <ReactMarkdown
+            source={CONTENT[pageContext.lang]}
+            linkTarget="_blank"
+            renderers={{
+              link: ExternalLink
+            }}
+          />
         </section>
         <div
           className={clsx(
             'scrum-poker__selected-card',
-            selectedCard && 'scrum-poker__selected-card--visible')}>
+            selectedCard && 'scrum-poker__selected-card--visible')}
+          onClick={() => this.selectCard(null)}
+        >
           {flipped ?
             (<PokerCardBack onClick={this.handleFlipCard} />) :
             (<PokerCardFront

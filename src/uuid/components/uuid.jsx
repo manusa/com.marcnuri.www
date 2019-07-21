@@ -6,6 +6,7 @@ import {createMuiTheme, withStyles} from '@material-ui/core/styles';
 import ThemeProvider from '@material-ui/styles/ThemeProvider';
 import Form from './form';
 import face512 from '../../components/avatar/face-512.png';
+import ExternalLink from '../../components/external-link';
 import Layout from '../../components/layout';
 import Seo from '../../components/seo/seo';
 import uuidEn from 'raw-loader!./uuid.en.md';
@@ -24,10 +25,6 @@ const CONTENT = {
   en: uuidEn,
   es: uuidEs
 };
-
-const Link = ({href, children}) => (
-  <a href={href} target={'_blank'} rel="noreferrer noopener">{children}</a>
-);
 
 const THEME = createMuiTheme({
   spacing: 4,
@@ -145,12 +142,12 @@ class Uuid extends React.Component {
             </Paper>
           </ThemeProvider>
         </section>
-        <section className="uuid__about" >
+        <section className="uuid__about markdown-section" >
           <ReactMarkdown
             source={CONTENT[pageContext.lang]}
             linkTarget="_blank"
             renderers={{
-              link: Link
+              link: ExternalLink
             }}
           />
         </section>
