@@ -15,5 +15,6 @@
   "uuid.form.Separator.Colon": "Dos Puntos (:)",
   "uuid.form.Separator.Semicolon": "Punto y Coma (;)",
   "uuid.form.Separator.Pipe": "Barra Vertical (|)",
-  "uuid.form.Generate": "Generar"
+  "uuid.form.Generate": "Generar",
+  "scrum.poker.title": "SCRUM Poker cards Online"
 }

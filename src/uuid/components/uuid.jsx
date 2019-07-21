@@ -17,6 +17,8 @@ import {
   MAX_QUANTITY,
   MIN_QUANTITY
 } from '../services';
+import '../../styles/main.scss';
+import '../../styles/pages/uuid.scss';
 
 const CONTENT = {
   en: uuidEn,

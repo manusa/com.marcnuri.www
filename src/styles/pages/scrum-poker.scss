@@ -1,0 +1,135 @@
+@import '../base/variables';
+
+$title-height: $header-height * 4;
+$poker-aspect-ratio: 140%;
+$poker-border-radius: 3%;
+$poker-default-width: 150px;
+@mixin poker-margin($margin) {
+  position: absolute;
+  top: $margin;
+  bottom: $margin;
+  left: $margin * $poker-aspect-ratio/100%;
+  right: $margin * $poker-aspect-ratio/100%;
+  border-radius: $poker-border-radius * 0.1;
+}
+
+.scrum-poker {
+  $self: &;
+  & &__title {
+    margin: 0;
+    color: white;
+    background: url('../assets/poker-cards.jpg') no-repeat center center;
+    background-size: cover;
+    & #{$self}__title-filter {
+      display: flex;
+      align-items: center;
+      background: rgba(7, 14, 29, 0.6);
+      height: $title-height;
+      & #{$self}__title-text {
+        margin: 0;
+        padding: 0 $base-padding;
+      }
+    }
+  }
+  & &__deck {
+    background: $color-blue;
+    overflow-x: auto;
+    & #{$self}__deck-cards {
+      display: flex;
+      //flex-wrap: wrap;
+      //justify-content: space-around;
+      &::before {
+        content: '';
+        min-width: 8px;
+      }
+      &::after {
+        content: '';
+        min-width: 8px;
+      }
+      & .poker-card {
+        min-width: $poker-default-width;
+        margin: 16px 0;
+        &:not(:last-child) {
+          margin-right: 16px;
+        }
+        & .poker-card__card {
+          box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+        }
+      }
+    }
+  }
+  & &__selected-card {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    @at-root &#{$self}__selected-card--visible {
+      display: flex;
+    }
+    & .poker-card {
+      margin: auto;
+      max-width: 100%;
+    }
+  }
+  & .poker-card {
+    $parent: &;
+    width: 100%;
+    max-width: $poker-default-width;
+    margin: 0 auto;
+    & .poker-card__container {
+      position: relative;
+      height: 0;
+      padding-top: $poker-aspect-ratio;
+      & .poker-card__card {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        border-radius: $poker-border-radius;
+      }
+    }
+    @at-root #{$parent}.poker-card--flipped  {
+      $poker-background-color: #0b2853;
+      & .poker-card__card {
+        background: white;
+        & .poker-card__outer-border {
+          @include poker-margin(3%);
+          background-color: $poker-background-color;
+          & .poker-card__inner-border {
+            @include poker-margin(1%);
+            background: white;
+            & .poker-card__inner {
+              @include poker-margin(0.5%);
+              background: $poker-background-color url('../assets/poker-bycicle.jpg') 50% 0 no-repeat;
+              background-size: contain;
+            }
+          }
+        }
+      }
+    }
+    @at-root #{$parent}.poker-card--front {
+      & .poker-card__card {
+        background: white;
+        & .poker-card__column-container {
+          @include poker-margin(3%);
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          & .poker-card__row-top,
+          & .poker-card__row-bottom {
+            display: flex;
+            justify-content: space-between;
+          }
+          & .poker-card__row-middle {
+            margin: 0 auto;
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+
+}

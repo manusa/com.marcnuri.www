@@ -23,10 +23,14 @@ $avatar-background: $color-blue-dark;
     height:0;
     overflow:hidden;
     z-index:-1;
-    content:  url('./assets/mount-bromo-low.jpg')
-    url('./assets/office-low.jpg')
-    url('./assets/trail-low.jpg')
-    url('./assets/trail-lowest.jpg');
+    content:  url('../assets/mount-bromo-low.jpg')
+    url('../assets/mount-bromo-lowest.jpg')
+    url('../assets/office-low.jpg')
+    url('../assets/office-lowest.jpg')
+    url('../assets/subway-java-low.jpg')
+    url('../assets/subway-java-lowest.jpg')
+    url('../assets/trail-low.jpg')
+    url('../assets/trail-lowest.jpg');
   }
 
   .header {
@@ -53,8 +57,8 @@ $avatar-background: $color-blue-dark;
       justify-content: center;
     }
     &#{$self}__cover--java-bromo {
-      background: url('./assets/mount-bromo-low.jpg') no-repeat center top,
-                  url('./assets/mount-bromo-lowest.jpg') no-repeat center top;
+      background: url('../assets/mount-bromo-low.jpg') no-repeat center top,
+                  url('../assets/mount-bromo-lowest.jpg') no-repeat center top;
       background-color: #fce1d8;
       background-size: cover;
       & #{$self}__cover-filter {
@@ -62,8 +66,8 @@ $avatar-background: $color-blue-dark;
       }
     }
     &#{$self}__cover--office {
-      background: url('./assets/office-low.jpg') no-repeat center top,
-                  url('./assets/office-lowest.jpg') no-repeat center top;
+      background: url('../assets/office-low.jpg') no-repeat center top,
+                  url('../assets/office-lowest.jpg') no-repeat center top;
       background-color: #544d47;
       background-size: cover;
       & #{$self}__cover-filter {
@@ -71,8 +75,8 @@ $avatar-background: $color-blue-dark;
       }
     }
     &#{$self}__cover--subway {
-      background: url('./assets/subway-java-low.jpg') no-repeat center top,
-      url('./assets/subway-java-lowest.jpg') no-repeat center top;
+      background: url('../assets/subway-java-low.jpg') no-repeat center top,
+                  url('../assets/subway-java-lowest.jpg') no-repeat center top;
       background-color: #544d47;
       background-size: cover;
       & #{$self}__cover-filter {
@@ -80,8 +84,8 @@ $avatar-background: $color-blue-dark;
       }
     }
     &#{$self}__cover--trail {
-      background: url('./assets/trail-low.jpg') no-repeat right top,
-                  url('./assets/trail-lowest.jpg') no-repeat right top;
+      background: url('../assets/trail-low.jpg') no-repeat right top,
+                  url('../assets/trail-lowest.jpg') no-repeat right top;
       background-color: #544d47;
       background-size: cover;
       & #{$self}__cover-filter {
