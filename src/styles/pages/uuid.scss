@@ -9,7 +9,7 @@ $title-height: $header-height * 6;
   & &__title {
     margin: 0;
     color: white;
-    background: url('./assets/valves-low.jpg') no-repeat center center;
+    background: url('../assets/valves-low.jpg') no-repeat center center;
     background-size: cover;
     & #{$self}__title-filter {
       display: flex;

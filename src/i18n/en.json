@@ -15,5 +15,6 @@
   "uuid.form.Separator.Colon": "Colon",
   "uuid.form.Separator.Semicolon": "Semicolon",
   "uuid.form.Separator.Pipe": "Pipe",
-  "uuid.form.Generate": "Generate"
+  "uuid.form.Generate": "Generate",
+  "scrum.poker.title": "SCRUM Poker cards Online"
 }

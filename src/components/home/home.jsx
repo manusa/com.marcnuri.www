@@ -14,6 +14,7 @@ import contactEs from 'raw-loader!./contact.es.md';
 import locales from '../../i18n/locales';
 import {localizedPath} from '../../i18n/path';
 import '../../styles/main.scss';
+import '../../styles/pages/home.scss';
 
 const ABOUT_CONTENT = {
   en: aboutEn,
