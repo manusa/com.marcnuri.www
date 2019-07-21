@@ -5,6 +5,7 @@ import Layout from '../../components/layout';
 import Seo from '../../components/seo/seo';
 import PokerCardBack from './poker-card-back';
 import PokerCardFront from './poker-card-front';
+import shiver from '../shiver';
 import '../../styles/main.scss';
 import '../../styles/pages/scrum-poker.scss';
 
@@ -17,6 +18,7 @@ class ScrumPoker extends React.Component {
       debugInfo: null
     };
     this.handleFlipCard = this.flipCard.bind(this);
+    this.shiver = shiver(this.onShake.bind(this));
   }
 
   selectCard(symbol) {
@@ -32,8 +34,16 @@ class ScrumPoker extends React.Component {
     });
   }
 
+  onShake() {
+    const {selectedCard, flipped} = this.state;
+    if (selectedCard && flipped) {
+      this.flipCard();
+    }
+  }
+
   componentDidMount() {
     if (window.DeviceMotionEvent) {
+      window.addEventListener('devicemotion', this.shiver);
       window.addEventListener('devicemotion', event => {
         this.setState({
           debugInfo: `
@@ -43,6 +53,10 @@ Acceleration Y: ${event.acceleration.y} m/s2
         });
       });
     }
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('devicemotion', this.shiver);
   }
 
   render() {

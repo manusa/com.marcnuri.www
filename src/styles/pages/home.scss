@@ -16,22 +16,6 @@ $avatar-background: $color-blue-dark;
   margin: 0;
   padding: 0;
   background: $color-blue;
-  &::after {
-    /** Image Preload **/
-    position:absolute;
-    width:0;
-    height:0;
-    overflow:hidden;
-    z-index:-1;
-    content:  url('../assets/mount-bromo-low.jpg')
-    url('../assets/mount-bromo-lowest.jpg')
-    url('../assets/office-low.jpg')
-    url('../assets/office-lowest.jpg')
-    url('../assets/subway-java-low.jpg')
-    url('../assets/subway-java-lowest.jpg')
-    url('../assets/trail-low.jpg')
-    url('../assets/trail-lowest.jpg');
-  }
 
   .header {
     z-index: 1;
