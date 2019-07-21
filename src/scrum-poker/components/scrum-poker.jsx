@@ -14,6 +14,7 @@ class ScrumPoker extends React.Component {
     this.state = {
       selectedCard: null,
       flipped: true,
+      debugInfo: null
     };
     this.handleFlipCard = this.flipCard.bind(this);
   }
@@ -31,17 +32,31 @@ class ScrumPoker extends React.Component {
     });
   }
 
+  componentDidMount() {
+    if (window.DeviceMotionEvent) {
+      window.addEventListener('devicemotion', event => {
+        this.setState({
+          debugInfo: `
+Acceleration X: ${event.acceleration.x} m/s2
+Acceleration Y: ${event.acceleration.y} m/s2
+        `
+        });
+      });
+    }
+  }
+
   render() {
     const {pageContext, intl} = this.props;
-    const {selectedCard, flipped} = this.state;
+    const {selectedCard, flipped, debugInfo} = this.state;
     const title = intl.formatMessage({id: 'scrum.poker.title'});
+    const description = intl.formatMessage({id: 'scrum.poker.meta.description'});
     return (
       <Layout className="scrum-poker" pageContext={pageContext}>
         <Seo
           pageContext={pageContext}
           lang={pageContext.lang}
           title={title}
-          description={title}
+          description={description}
         />
         <div className={'scrum-poker__title'}>
           <div className={'scrum-poker__title-filter'}>
@@ -50,7 +65,7 @@ class ScrumPoker extends React.Component {
         </div>
         <section className={'scrum-poker__deck'}>
           <div className={'scrum-poker__deck-cards'}>
-            {['0', '1/2', '1', '2', '3', '5', '8', '13', '20', '40', '100', '?']
+            {['0', '1/2', '1', '2', '3', '5', '8', '13', '20', '40', '100', '?', '∞']
               .map(symbol =>
                 <PokerCardFront
                   key={symbol} symbol={symbol}
@@ -60,6 +75,9 @@ class ScrumPoker extends React.Component {
           </div>
         </section>
         <section className={'scrum-poker__about'}>
+          <pre>
+            {debugInfo}
+          </pre>
           Play!
         </section>
         <div

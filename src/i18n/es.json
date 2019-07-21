@@ -16,5 +16,6 @@
   "uuid.form.Separator.Semicolon": "Punto y Coma (;)",
   "uuid.form.Separator.Pipe": "Barra Vertical (|)",
   "uuid.form.Generate": "Generar",
-  "scrum.poker.title": "SCRUM Poker cards Online"
+  "scrum.poker.title": "SCRUM Planning: Cartas de póker online",
+  "scrum.poker.meta.description": "Baraja de cartas para sesiones de planificación SCRUM. Escoge una carta y agita tu teléfono para mostrarla."
 }
