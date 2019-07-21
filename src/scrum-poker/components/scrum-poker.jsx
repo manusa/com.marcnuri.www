@@ -2,6 +2,7 @@ import React from 'react';
 import clsx from 'clsx';
 import ReactMarkdown from 'react-markdown';
 import {injectIntl} from 'react-intl';
+import result from 'lodash/result';
 import ExternalLink from '../../components/external-link';
 import Layout from '../../components/layout';
 import Seo from '../../components/seo/seo';
@@ -38,7 +39,7 @@ class ScrumPoker extends React.Component {
   }
 
   flipCard(event) {
-    event.stopPropagation();
+    result(event, 'stopPropagation');
     this.setState({
       flipped: !this.state.flipped
     });
