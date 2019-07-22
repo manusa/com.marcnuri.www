@@ -5,6 +5,7 @@ import ReactMarkdown from 'react-markdown';
 import Avatar from '../avatar/avatar';
 import face512 from '../avatar/face-512.png';
 import faceWithLaptop from '../avatar/face-laptop.png';
+import ExternalLink from '../external-link';
 import Layout from '../layout';
 import Seo from '../seo/seo';
 import aboutEn from 'raw-loader!./about.en.md';
@@ -109,6 +110,9 @@ class Home extends React.Component {
             className={'home__avatar-section-content'}
             source={CONTACT_CONTENT[pageContext.lang]}
             linkTarget="_blank"
+            renderers={{
+              link: ExternalLink
+            }}
           />
         </section>
       </Layout>

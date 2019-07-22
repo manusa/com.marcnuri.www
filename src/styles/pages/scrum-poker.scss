@@ -67,6 +67,8 @@ $poker-background-color: #0b2853;
     bottom: 0;
     left: 0;
     right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: $header-z-index;
     @at-root &#{$self}__selected-card--visible {
       display: flex;
     }
