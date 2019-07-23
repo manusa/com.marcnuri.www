@@ -69,12 +69,32 @@ $poker-background-color: #0b2853;
     right: 0;
     background: rgba(0, 0, 0, 0.5);
     z-index: $header-z-index;
+    perspective: 1000px;
     @at-root &#{$self}__selected-card--visible {
-      display: flex;
+      display: block;
     }
-    & .poker-card {
-      margin: auto;
-      max-width: 71.4vh;
+    & .scrum-poker__selected-card-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      & .poker-card {
+        margin: auto;
+        max-width: 71.4vh;
+        backface-visibility: hidden;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      & .poker-card--front {
+        transform: translateY(-50%) rotateY(180deg);
+      }
+    }
+    @at-root &#{$self}__selected-card--revealed .scrum-poker__selected-card-container {
+      transform: rotateY(180deg);
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
     }
   }
   & .poker-card {

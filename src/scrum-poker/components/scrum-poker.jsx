@@ -103,16 +103,18 @@ class ScrumPoker extends React.Component {
         <div
           className={clsx(
             'scrum-poker__selected-card',
-            selectedCard && 'scrum-poker__selected-card--visible')}
+            selectedCard && 'scrum-poker__selected-card--visible',
+            !flipped && 'scrum-poker__selected-card--revealed',
+            flipped && 'scrum-poker__selected-card--flipped')}
           onClick={() => this.selectCard(null)}
         >
-          {flipped ?
-            (<PokerCardBack onClick={this.handleFlipCard} />) :
-            (<PokerCardFront
+          <div className='scrum-poker__selected-card-container'>
+            <PokerCardBack onClick={this.handleFlipCard} />
+            <PokerCardFront
               symbol={selectedCard}
               onClick={() => this.selectCard(null)}
-            />)
-          }
+            />
+          </div>
         </div>
       </Layout>
     );
