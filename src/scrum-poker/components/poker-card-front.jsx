@@ -11,14 +11,14 @@ const PokerCardFront = ({symbol, onClick}) => (
       <div className="poker-card__row-top">
         <div className="poker-card__symbol poker-card__symbol--left">
           <svg viewBox="0 0 30 18">
-            <text y="9" dominantBaseline="middle">
+            <text y="13">
               {symbol}
             </text>
           </svg>
         </div>
         <div className="poker-card__symbol poker-card__symbol--right">
           <svg viewBox="0 0 30 18">
-            <text x="100%" y="9" dominantBaseline="middle" textAnchor="end">
+            <text x="100%" y="13" textAnchor="end">
               {symbol}
             </text>
           </svg>
@@ -26,7 +26,7 @@ const PokerCardFront = ({symbol, onClick}) => (
       </div>
       <div className="poker-card__row-middle">
         <svg viewBox="0 0 30 18">
-          <text x="50%" y="9" dominantBaseline="middle" textAnchor="middle">
+          <text x="50%" y="13" textAnchor="middle">
             {symbol}
           </text>
         </svg>
@@ -34,14 +34,14 @@ const PokerCardFront = ({symbol, onClick}) => (
       <div className="poker-card__row-bottom">
         <div className="poker-card__symbol poker-card__symbol--left">
           <svg viewBox="0 0 30 18">
-            <text x="100%" y="9" dominantBaseline="middle" textAnchor="end">
+            <text x="100%" y="13" textAnchor="end">
               {symbol}
             </text>
           </svg>
         </div>
         <div className="poker-card__symbol poker-card__symbol--right">
           <svg viewBox="0 0 30 18">
-            <text y="9" dominantBaseline="middle">
+            <text y="13">
               {symbol}
             </text>
           </svg>
