@@ -1,5 +1,5 @@
 import React from 'react';
-import Uuid from '../../uuid/components/uuid';
+import {Uuid} from '../../uuid';
 
 const Index = props => (
   <Uuid {...props} />
