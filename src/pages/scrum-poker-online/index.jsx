@@ -1,5 +1,5 @@
 import React from 'react';
-import ScrumPoker from '../../scrum-poker/components/scrum-poker';
+import {ScrumPoker} from '../../scrum-poker';
 
 const Index = props => (
   <ScrumPoker {...props} />
