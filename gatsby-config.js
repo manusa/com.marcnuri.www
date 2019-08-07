@@ -52,6 +52,7 @@ module.exports = {
         display: 'browser',
         icon: 'src/components/avatar/face-512-t.png'
       }
-    }
+    },
+    'gatsby-plugin-material-ui'
   ]
 };
