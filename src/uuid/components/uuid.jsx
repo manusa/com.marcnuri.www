@@ -1,9 +1,8 @@
 import React from 'react';
 import {injectIntl} from 'react-intl';
 import ReactMarkdown from 'react-markdown';
-import Paper from '@material-ui/core/Paper';
-import {createMuiTheme, withStyles} from '@material-ui/core/styles';
-import ThemeProvider from '@material-ui/styles/ThemeProvider';
+import {Paper, withStyles} from '@material-ui/core';
+import {ThemeProvider} from '@material-ui/styles';
 import Form from './form';
 import face512 from '../../components/avatar/face-512.png';
 import ExternalLink from '../../components/external-link';
@@ -18,6 +17,7 @@ import {
   MAX_QUANTITY,
   MIN_QUANTITY
 } from '../services';
+import {darkTheme} from '../../styles';
 import '../../styles/main.scss';
 import '../../styles/pages/uuid.scss';
 
@@ -25,15 +25,6 @@ const CONTENT = {
   en: uuidEn,
   es: uuidEs
 };
-
-const THEME = createMuiTheme({
-  spacing: 4,
-  palette: {
-    type: 'dark',
-    primary: {main: '#78bcda'},
-    secondary: {main: '#7ea896'}
-  }
-});
 
 const STYLES = theme => ({
   root: {
@@ -116,21 +107,21 @@ class Uuid extends React.Component {
     const {formValues, loading, result} = this.state;
     const title = intl.formatMessage({id: 'uuid.title'});
     return (
-      <Layout className="uuid" pageContext={pageContext}>
-        <Seo
-          pageContext={pageContext}
-          lang={pageContext.lang}
-          title={title}
-          description={intl.formatMessage({id: 'uuid.meta.description'})}
-          image={face512}
-        />
-        <div className={'uuid__title'}>
-          <div className={'uuid__title-filter'}>
-            <h1 className={'uuid__title-text'}>{title}</h1>
+      <ThemeProvider theme={darkTheme}>
+        <Layout className="uuid" pageContext={pageContext}>
+          <Seo
+            pageContext={pageContext}
+            lang={pageContext.lang}
+            title={title}
+            description={intl.formatMessage({id: 'uuid.meta.description'})}
+            image={face512}
+          />
+          <div className={'uuid__title'}>
+            <div className={'uuid__title-filter'}>
+              <h1 className={'uuid__title-text'}>{title}</h1>
+            </div>
           </div>
-        </div>
-        <section className="uuid__form">
-          <ThemeProvider theme={THEME}>
+          <section className="uuid__form">
             <Paper className={classes.root}>
               <Form
                 values={formValues}
@@ -140,18 +131,18 @@ class Uuid extends React.Component {
                 onGenerateClick={this.handleOnGenerate}
               />
             </Paper>
-          </ThemeProvider>
-        </section>
-        <section className="uuid__about markdown-section" >
-          <ReactMarkdown
-            source={CONTENT[pageContext.lang]}
-            linkTarget="_blank"
-            renderers={{
-              link: ExternalLink
-            }}
-          />
-        </section>
-      </Layout>
+          </section>
+          <section className="uuid__about markdown-section" >
+            <ReactMarkdown
+              source={CONTENT[pageContext.lang]}
+              linkTarget="_blank"
+              renderers={{
+                link: ExternalLink
+              }}
+            />
+          </section>
+        </Layout>
+      </ThemeProvider>
     );
   }
 }

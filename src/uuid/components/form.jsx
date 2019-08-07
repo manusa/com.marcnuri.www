@@ -1,16 +1,18 @@
 import React from 'react';
 import {injectIntl} from 'react-intl';
 import PropTypes from 'prop-types';
-import {withStyles} from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
-import FormControl from '@material-ui/core/FormControl';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import Grid from '@material-ui/core/Grid';
-import InputLabel from '@material-ui/core/InputLabel';
-import LinearProgress from '@material-ui/core/LinearProgress';
-import Select from '@material-ui/core/Select';
-import Switch from '@material-ui/core/Switch';
-import TextField from '@material-ui/core/TextField';
+import {
+  Button,
+  FormControl,
+  FormControlLabel,
+  Grid,
+  InputLabel,
+  LinearProgress,
+  Select,
+  Switch,
+  TextField,
+  withStyles
+} from '@material-ui/core';
 
 const selectAll = event => {
   event.preventDefault();
