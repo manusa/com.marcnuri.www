@@ -4,6 +4,11 @@
 Welcome, this is the homepage for the Isotope Mail Client official demo application hosted at
 [isotope.marcnuri.com](https://isotope.marcnuri.com).
 
+[Isotope Mail Client](https://github.com/manusa/isotope-mail) is a free open source webmail
+application built with a microservice architecture vision in mind.
+You can find more details about the current application status and features
+[here](https://blog.marcnuri.com/isotope-mail-client-introduction/).
+
 The demo hosts the **latest** development version of
 [Isotope Mail Client](https://github.com/manusa/isotope-mail) and can be used to test the newest 
 features under development.
