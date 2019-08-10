@@ -10,10 +10,10 @@
 <url> <loc>https://www.marcnuri.com/es/scrum-poker-online/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.marcnuri.com/uuid/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://www.marcnuri.com/es/uuid/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://www.marcnuri.com/adr-online}</loc> <changefreq>yearly</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://www.marcnuri.com/iban}</loc> <changefreq>yearly</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://www.marcnuri.com/en/adr-online}</loc> <changefreq>yearly</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://www.marcnuri.com/en/iban}</loc> <changefreq>yearly</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://www.marcnuri.com/es/adr-online}</loc> <changefreq>yearly</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://www.marcnuri.com/es/iban}</loc> <changefreq>yearly</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.marcnuri.com/adr-online</loc> <changefreq>yearly</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.marcnuri.com/iban</loc> <changefreq>yearly</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.marcnuri.com/en/adr-online</loc> <changefreq>yearly</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.marcnuri.com/en/iban</loc> <changefreq>yearly</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.marcnuri.com/es/adr-online</loc> <changefreq>yearly</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://www.marcnuri.com/es/iban</loc> <changefreq>yearly</changefreq> <priority>0.7</priority> </url>
 </urlset>
