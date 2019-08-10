@@ -17,5 +17,10 @@
   "uuid.form.Separator.Pipe": "Barra Vertical (|)",
   "uuid.form.Generate": "Generar",
   "scrum.poker.title": "Scrum Planning Poker: Cartas de póker online",
-  "scrum.poker.meta.description": "Baraja de cartas para sesiones de planificación Scrum. Escoge una carta y agita tu teléfono para mostrarla."
+  "scrum.poker.meta.description": "Baraja de cartas para sesiones de planificación Scrum. Escoge una carta y agita tu teléfono para mostrarla.",
+  "isotopeMailDemo.title": "Isotope Mail Client Demo",
+  "isotopeMailDemo.description": "Isotope Mail Client Demo",
+  "isotopeMailDemo.privacyPolicy": "Política de privacidad",
+  "isotopeMailDemo.privacyPolicy.title": "Isotope Mail Client Demo: Política de privacidad",
+  "isotopeMailDemo.privacyPolicy.description": "Política de privacidad para Isotope Mail Client Demo. Contiene la información relacionada con la privacidad de los usuarios de la aplicación y cómo se maneja ésta por el equipo de Isotope Mail Client."
 }

@@ -1,4 +1,4 @@
-# Privacy Policy for isotope.marcnuri.com
+## Privacy Policy for isotope.marcnuri.com
 
 At Isotope Mail Client Demo Application, accessible from https://isotope.marcnuri.com,
 one of our main priorities is the privacy of our visitors.
@@ -8,7 +8,7 @@ Isotope Mail Client Demo Application and how we use it.
 If you have additional questions or require more information about our Privacy Policy,
 do not hesitate to contact us through email at _marc 'at' marcnuri.com_
 
-## General Data Protection Regulation (GDPR)
+### General Data Protection Regulation (GDPR)
 
 We are a Data Controller of your information.
 
@@ -38,7 +38,7 @@ In certain circumstances, you have the following data protection rights:
 *   The right to data portability
 *   The right to withdraw consent
 
-## Log Files
+### Log Files
 
 Isotope Mail Client Demo Application follows a standard procedure of using log files.
 These files log visitors when they visit websites. All hosting companies do this and a part of
@@ -48,14 +48,14 @@ and possibly the number of clicks. These are not linked to any information that 
 identifiable. The purpose of the information is for analyzing trends, administering the site,
 tracking users' movement on the website, and gathering demographic information.
 
-## Cookies and Web Beacons
+### Cookies and Web Beacons
 
 Like any other website, Isotope Mail Client Demo Application uses 'cookies'. These cookies are used
 to store information including visitors' preferences, and the pages on the website that the visitor
 accessed or visited. The information is used to optimize the users' experience by customizing our
 web page content based on visitors' browser type and/or other information.
 
-## Google DoubleClick DART Cookie
+### Google DoubleClick DART Cookie
 
 Google is one of a third-party vendor on our site. It also uses cookies, known as DART cookies,
 to serve ads to our site visitors based upon their visit to www.website.com and other sites on the
@@ -63,7 +63,7 @@ internet. However, visitors may choose to decline the use of DART cookies by vis
 and content network Privacy Policy at the following URL
 – [https://policies.google.com/technologies/ads](https://policies.google.com/technologies/ads)
 
-## Privacy Policies
+### Privacy Policies
 
 You may consult this list to find the Privacy Policy for each of the advertising partners of
 Isotope Mail Client Demo Application.
@@ -78,7 +78,7 @@ you see on websites that you visit.
 Note that Isotope Mail Client Demo Application has no access to or control over these cookies that
 are used by third-party advertisers.
 
-## Third Party Privacy Policies
+### Third Party Privacy Policies
 
 Isotope Mail Client Demo Application's Privacy Policy does not apply to other advertisers or
 websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party
@@ -90,7 +90,7 @@ You can choose to disable cookies through your individual browser options. To kn
 detailed information about cookie management with specific web browsers, it can be found at the
 browsers' respective websites. What Are Cookies?
 
-## Children's Information
+### Children's Information
 
 Another part of our priority is adding protection for children while using the internet.
 We encourage parents and guardians to observe, participate in, and/or monitor and guide their
@@ -101,13 +101,13 @@ Information from children under the age of 13\. If you think that your child pro
 information on our website, we strongly encourage you to contact us immediately and we will do our
 best efforts to promptly remove such information from our records.
 
-## Online Privacy Policy Only
+### Online Privacy Policy Only
 
 Our Privacy Policy applies only to our online activities and is valid for visitors to our website
 with regards to the information that they shared and/or collect in
 Isotope Mail Client Demo Application. This policy is not applicable to any information collected
 offline or via channels other than this website.
 
-## Consent
+### Consent
 
 By using our website, you hereby consent to our Privacy Policy and agree to its terms.

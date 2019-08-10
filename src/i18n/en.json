@@ -17,5 +17,10 @@
   "uuid.form.Separator.Pipe": "Pipe",
   "uuid.form.Generate": "Generate",
   "scrum.poker.title": "Scrum Planning Poker Cards Online",
-  "scrum.poker.meta.description": "Online deck of cards for you Scrum planning sessions. Pick a card from the deck and shake your phone to reveal it."
+  "scrum.poker.meta.description": "Online deck of cards for you Scrum planning sessions. Pick a card from the deck and shake your phone to reveal it.",
+  "isotopeMailDemo.title": "Isotope Mail Client Demo",
+  "isotopeMailDemo.description": "Isotope Mail Client Demo homepage. Information about the official online demo of the application and instructions about how to login and test the basic features.",
+  "isotopeMailDemo.privacyPolicy": "Privacy Policy",
+  "isotopeMailDemo.privacyPolicy.title": "Isotope Mail Client Demo: Privacy Policy",
+  "isotopeMailDemo.privacyPolicy.description": "Privacy Policy for Isotope Mail Client Demo. Contains all the information related to user's privacy and how this information is handled by the Isotope Mail Client team."
 }
