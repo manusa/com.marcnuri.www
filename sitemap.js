@@ -20,7 +20,7 @@ const createStaticRoutes = site => {
     .forEach(locale => {
       STATIC_ROUTES.forEach(route => {
         staticRoutes.push({
-          url: `${site.siteMetadata.siteUrl}/${locale}${route}}`,
+          url: `${site.siteMetadata.siteUrl}/${locale}${route}`,
           changefreq: 'yearly',
           priority: 0.7
         });
