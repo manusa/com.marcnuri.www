@@ -1,6 +1,6 @@
 {
   "name": "@marcnuri/www.marcnuri.com",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "www.marcnuri.com ",
   "bin": {
     "marcnuri.com": "index.js"
@@ -11,6 +11,7 @@
     "dev": "gatsby develop --host=0.0.0.0",
     "develop": "gatsby develop --host=0.0.0.0",
     "start": "npm run develop",
+    "pretest": "eslint --ignore-path .gitignore .",
     "test": "jest"
   },
   "publishConfig": {
@@ -45,7 +46,7 @@
     "clsx": "^1.0.4",
     "gatsby": "^2.8.2",
     "gatsby-plugin-google-analytics": "^2.0.20",
-    "gatsby-plugin-manifest": "^2.1.1",
+    "gatsby-plugin-manifest": "^2.2.42",
     "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-robots-txt": "^1.4.0",
     "gatsby-plugin-sass": "^2.0.11",

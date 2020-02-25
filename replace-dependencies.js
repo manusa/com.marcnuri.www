@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/* eslint-disable no-console */
 
 const PACKAGE_JSON_PATH = 'package.json';
 const fs = require('fs');
