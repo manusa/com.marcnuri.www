@@ -6,6 +6,7 @@ const checkCertificate = port => (hostname, done) => {
     expect(certificate.subject.CN).toMatch(/.*marcnuri.com$/);
     const daysToExpiry = (new Date(certificate.valid_to) - new Date()) / (24 * 60 * 60 * 1000);
     expect(daysToExpiry).toBeGreaterThan(7);
+    socket.end();
     done();
   });
 };
