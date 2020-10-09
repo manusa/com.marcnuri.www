@@ -54,7 +54,7 @@ describe('Check services are active', () => {
       expect(response.statusCode).toBe(200);
       assertResponseBody(done, response, body => {
         expect(body).toMatch('<title>Marc Nuri - Blogging about business and technology</title>');
-        expect(body).toMatch('<a class="site-logo" href="https://blog.marcnuri.com/" title="Marc Nuri | Blogging about business and technology">');
+        expect(body).toMatch('<a class="site-logo" href="https://blog.marcnuri.com/" aria-label="Marc Nuri | Blogging about business and technology">');
       });
     }).end();
   });
