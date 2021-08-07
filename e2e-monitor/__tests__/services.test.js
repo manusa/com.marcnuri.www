@@ -53,7 +53,10 @@ describe('Check services are active', () => {
     https.get('https://blog.marcnuri.com/', {}, response => {
       expect(response.statusCode).toBe(200);
       assertResponseBody(done, response, body => {
-        expect(body).toMatch('<title data-react-helmet="true">Marc Nuri - Blogging about business and technology (Page 1/5) - Marc Nuri</title>');
+        expect(body).toMatch(
+          // eslint-disable-next-line max-len
+          /<title data-react-helmet="true">Marc Nuri - Blogging about business and technology \(Page 1\/\d\) - Marc Nuri<\/title>/
+        );
         expect(body).toMatch('<div class="footer__credits">© 2007 - <!-- -->2021<!-- --> <a href="https://www.marcnuri.com" rel="noopener" title="Link to https://www.marcnuri.com" aria-label="Link to https://www.marcnuri.com" target="_blank">Marc Nuri</a></div>');
       });
     }).end();
