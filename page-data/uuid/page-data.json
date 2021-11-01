@@ -1,1 +1,5 @@
-{"componentChunkName":"component---src-pages-uuid-jsx","path":"/uuid/","result":{"pageContext":{"locale":{"path":"en","name":"English","language":"en","default":true},"lang":"en","pagePath":"/uuid/","localizedPath":"/uuid/"}},"staticQueryHashes":["3514990218","586315219"]}
+{
+    "componentChunkName": "component---src-pages-uuid-jsx",
+    "path": "/uuid/",
+    "result": {"pageContext":{"locale":{"path":"en","name":"English","language":"en","default":true},"lang":"en","pagePath":"/uuid/","localizedPath":"/uuid/"}},
+    "staticQueryHashes": ["3514990218","586315219"]}

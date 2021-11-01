@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://www.marcnuri.com/sitemap.xml
+Sitemap: https://www.marcnuri.com/sitemap/sitemap-index.xml
 Host: https://www.marcnuri.com
