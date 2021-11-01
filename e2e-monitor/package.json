@@ -19,6 +19,6 @@
   ],
   "homepage": "https://github.com/manusa/www.marcnuri.com#readme",
   "devDependencies": {
-    "jest": "^27.0.6"
+    "jest": "^27.3.1"
   }
 }
