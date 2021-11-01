@@ -1,5 +1,5 @@
-const React = require('react');
-const fostoKorpoFonto = require('raw-loader!./fosto-korpo-fonto.txt');
+import React from 'react';
+import fostoKorpoFonto from 'raw-loader!./fosto-korpo-fonto.txt';
 
 const consoleBanner = `%c
 ███╗   ███╗ █████╗ ██████╗  ██████╗    ███╗   ██╗██╗   ██╗██████╗ ██╗
@@ -10,7 +10,7 @@ const consoleBanner = `%c
 ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝    ╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝╚═╝
 `.replace(/\n/g, '\\n');
 
-const fostoKorpo = (
+export const FostoKorpo = () => (
   <>
     <style dangerouslySetInnerHTML={{__html: `\n/**\n${fostoKorpoFonto}\n**/\n`}} />
     <script dangerouslySetInnerHTML={{__html: `
@@ -19,5 +19,3 @@ const fostoKorpo = (
     }} />
   </>
 );
-
-module.exports = fostoKorpo;
