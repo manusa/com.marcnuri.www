@@ -4,14 +4,20 @@
     "node": true,
     "browser": true
   },
-  "parser": "babel-eslint",
+  "parser": "@babel/eslint-parser",
   "parserOptions": {
-    "ecmaVersion": 2017,
+    "ecmaVersion": 2020,
     "sourceType": "module",
     "ecmaFeatures": {
       "jsx": true,
       "experimentalObjectRestSpread": true
-    }
+    },
+    "babelOptions": {
+      "presets": [
+        "babel-preset-gatsby"
+      ]
+    },
+    "requireConfigFile": false
   },
   "rules": {
     // React
@@ -180,7 +186,8 @@
   },
   "plugins": [
     "jest",
-    "react"
+    "react",
+    "graphql"
   ],
   "extends": [
     "plugin:jest/recommended"

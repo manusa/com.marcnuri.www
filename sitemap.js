@@ -5,37 +5,26 @@ const STATIC_ROUTES = [
   'iban'
 ];
 
-const createRegularEntries = ({site, allSitePage}) =>
-  allSitePage.edges.map(edge => (
-    {
-      url: `${site.siteMetadata.siteUrl}${edge.node.path}`,
-      changefreq: 'daily',
-      priority: 0.7
-    })
-  );
-
-const createStaticRoutes = site => {
+const createStaticRoutes = () => {
   const staticRoutes = [];
   ['', ...Object.keys(locales).map(locale => `${locale}/`)]
     .forEach(locale => {
       STATIC_ROUTES.forEach(route => {
         staticRoutes.push({
-          url: `${site.siteMetadata.siteUrl}/${locale}${route}`,
-          changefreq: 'yearly',
-          priority: 0.7
+          path: `/${locale}${route}`
         });
       });
     });
   return staticRoutes;
 };
 
-const serializer = ({site, allSitePage}) => {
+const resolvePages = ({allSitePage}) => {
   const entries = [];
-  entries.push(...createRegularEntries({site, allSitePage}));
-  entries.push(...createStaticRoutes(site));
+  entries.push(...allSitePage.nodes);
+  entries.push(...createStaticRoutes());
   return entries;
 };
 
 module.exports = {
-  serializer
+  resolvePages
 };

@@ -100,7 +100,7 @@ class Home extends React.Component {
           <h2 className={'home__avatar-section-subtitle'}><FormattedMessage id="home.subtitle"/></h2>
           <ReactMarkdown
             className={'home__avatar-section-content'}
-            source={ABOUT_CONTENT[pageContext.lang]}
+            children={ABOUT_CONTENT[pageContext.lang]}
           />
         </section>
         <section className={'home__section home__avatar-section home__contact'}>
@@ -108,10 +108,10 @@ class Home extends React.Component {
           <h2 className={'home__avatar-section-subtitle'}><FormattedMessage id="home.lendAHand"/></h2>
           <ReactMarkdown
             className={'home__avatar-section-content'}
-            source={CONTACT_CONTENT[pageContext.lang]}
+            children={CONTACT_CONTENT[pageContext.lang]}
             linkTarget="_blank"
-            renderers={{
-              link: ExternalLink
+            components={{
+              a: ExternalLink
             }}
           />
         </section>

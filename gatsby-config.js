@@ -4,7 +4,7 @@ module.exports = {
   siteMetadata: {
     title: 'Marc Nuri',
     siteUrl: 'https://www.marcnuri.com',
-    year: 2019,
+    year: 2021,
     description: 'I craft code',
     author: 'Marc Nuri',
     social: {
@@ -16,14 +16,7 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    {
-      resolve: 'gatsby-plugin-sass',
-      options: {
-        includePaths: [
-          require('path').resolve(__dirname, 'node_modules')
-        ]
-      }
-    },
+    'gatsby-plugin-sass',
     {
       resolve: 'gatsby-plugin-google-analytics',
       options: {
@@ -33,7 +26,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sitemap',
       options: {
-        serialize: sitemap.serializer
+        resolvePages: sitemap.resolvePages
       }
     },
     {

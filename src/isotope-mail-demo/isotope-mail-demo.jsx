@@ -23,10 +23,10 @@ const IsotopeMailDemo = ({pageContext, intl}) => (
       image={isotopeLogo}
     />
     <ReactMarkdown
-      source={isotopeMailDemoEn}
+      children={isotopeMailDemoEn}
       linkTarget="_blank"
-      renderers={{
-        link: ExternalLink
+      components={{
+        a: ExternalLink
       }}
       transformImageUri={image => imageMap[image]}
     />

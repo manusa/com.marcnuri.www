@@ -18,10 +18,10 @@ const PrivacyPolicy = ({pageContext, intl}) => (
       image={isotopeLogo}
     />
     <ReactMarkdown
-      source={privacyPolicyEn}
+      children={privacyPolicyEn}
       linkTarget="_blank"
-      renderers={{
-        link: ExternalLink
+      components={{
+        a: ExternalLink
       }}
     />
   </Layout>

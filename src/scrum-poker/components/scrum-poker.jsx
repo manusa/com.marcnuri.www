@@ -93,10 +93,10 @@ class ScrumPoker extends React.Component {
         </section>
         <section className={'scrum-poker__about markdown-section'}>
           <ReactMarkdown
-            source={CONTENT[pageContext.lang]}
+            children={CONTENT[pageContext.lang]}
             linkTarget="_blank"
-            renderers={{
-              link: ExternalLink
+            components={{
+              a: ExternalLink
             }}
           />
         </section>
