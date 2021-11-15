@@ -37,12 +37,12 @@ export const onRenderBody = ({
     } else {
       effectiveClientId = uuid;
     }
-      gtag('js', new Date());
-      gtag('config', '${trackingId}', {
-        send_page_view: false,
-        client_storage: 'none',
-        client_id: effectiveClientId
-      });
+    gtag('js', new Date());
+    gtag('config', '${trackingId}', {
+      send_page_view: false,
+      client_storage: 'none',
+      client_id: effectiveClientId
+    });
   `}}/>);
   return setPostBodyComponents(inlineScripts);
 };
