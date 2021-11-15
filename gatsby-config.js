@@ -20,7 +20,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-google-analytics-gtag',
       options: {
-        trackingId: 'UA-1509094-4'
+        trackingId: 'UA-1509094-4',
+        enableLocalStorage: false
       }
     },
     {

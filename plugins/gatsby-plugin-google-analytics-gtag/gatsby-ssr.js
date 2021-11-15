@@ -3,7 +3,7 @@ import React from 'react';
 export const onRenderBody = ({
   setHeadComponents,
   setPostBodyComponents
-}, {trackingId}) => {
+}, {trackingId, enableLocalStorage = false}) => {
   if (process.env.NODE_ENV !== 'production' || !trackingId) {
     return null;
   }
@@ -26,10 +26,10 @@ export const onRenderBody = ({
     const GA_CLIENT_ID_KEY = 'ga:clientId';
     window.dataLayer = window.dataLayer || [];
     function gtag(){window.dataLayer.push(arguments);}
-    if (window.localStorage) {
+    const url = URL.createObjectURL(new Blob());
+    const uuid = url.substring(url.lastIndexOf('/') + 1);
+    if (${enableLocalStorage} && window.localStorage) {
       if (!localStorage.getItem(GA_CLIENT_ID_KEY)) {
-        const url = URL.createObjectURL(new Blob());
-        const uuid = url.substring(url.lastIndexOf('/') + 1);
         window.localStorage.setItem(GA_CLIENT_ID_KEY, uuid)
       }
       gtag('js', new Date());
@@ -37,6 +37,12 @@ export const onRenderBody = ({
         send_page_view: false,
         client_storage: 'none',
         client_id: window.localStorage.getItem(GA_CLIENT_ID_KEY)
+      });
+    } else {
+      gtag('config', '${trackingId}', {
+        send_page_view: false,
+        client_storage: 'none',
+        client_id: uuid
       });
     }
   `}}/>);
