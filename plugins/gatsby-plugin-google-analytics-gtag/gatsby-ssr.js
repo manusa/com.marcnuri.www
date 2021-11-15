@@ -28,23 +28,21 @@ export const onRenderBody = ({
     function gtag(){window.dataLayer.push(arguments);}
     const url = URL.createObjectURL(new Blob());
     const uuid = url.substring(url.lastIndexOf('/') + 1);
+    let effectiveClientId;
     if (${enableLocalStorage} && window.localStorage) {
       if (!localStorage.getItem(GA_CLIENT_ID_KEY)) {
         window.localStorage.setItem(GA_CLIENT_ID_KEY, uuid)
       }
+      effectiveClientId = window.localStorage.getItem(GA_CLIENT_ID_KEY);
+    } else {
+      effectiveClientId = uuid;
+    }
       gtag('js', new Date());
       gtag('config', '${trackingId}', {
         send_page_view: false,
         client_storage: 'none',
-        client_id: window.localStorage.getItem(GA_CLIENT_ID_KEY)
+        client_id: effectiveClientId
       });
-    } else {
-      gtag('config', '${trackingId}', {
-        send_page_view: false,
-        client_storage: 'none',
-        client_id: uuid
-      });
-    }
   `}}/>);
   return setPostBodyComponents(inlineScripts);
 };
