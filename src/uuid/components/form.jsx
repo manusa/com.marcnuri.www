@@ -112,7 +112,7 @@ const Form = ({intl, values, loading, result, onFieldChange, onGenerateClick}) =
           label={intl.formatMessage({id: 'uuid.form.Hyphens'})}
         />
       </Grid>
-      <Grid container justify="flex-end">
+      <Grid container justifyContent="flex-end">
         <Button color="primary" disabled={loading} onClick={onGenerateClick}>
           {intl.formatMessage({id: 'uuid.form.Generate'})}
         </Button>
