@@ -1,8 +1,7 @@
 import React from 'react';
 import {injectIntl} from 'react-intl';
 import ReactMarkdown from 'react-markdown';
-import {Paper, withStyles} from '@material-ui/core';
-import {ThemeProvider} from '@material-ui/styles';
+import {Paper, ThemeProvider} from '@mui/material';
 import Form from './form';
 import face512 from '../../components/avatar/face-512.png';
 import ExternalLink from '../../components/external-link';
@@ -25,12 +24,6 @@ const CONTENT = {
   en: uuidEn,
   es: uuidEs
 };
-
-const STYLES = theme => ({
-  root: {
-    padding: theme.spacing(3, 2)
-  }
-});
 
 class Uuid extends React.Component {
   constructor(props) {
@@ -103,7 +96,7 @@ class Uuid extends React.Component {
   }
 
   render() {
-    const {pageContext, intl, classes} = this.props;
+    const {pageContext, intl} = this.props;
     const {formValues, loading, result} = this.state;
     const title = intl.formatMessage({id: 'uuid.title'});
     return (
@@ -122,7 +115,7 @@ class Uuid extends React.Component {
             </div>
           </div>
           <section className="uuid__form">
-            <Paper className={classes.root}>
+            <Paper>
               <Form
                 values={formValues}
                 loading={loading}
@@ -147,4 +140,4 @@ class Uuid extends React.Component {
   }
 }
 
-export default injectIntl(withStyles(STYLES)(Uuid));
+export default injectIntl(Uuid);

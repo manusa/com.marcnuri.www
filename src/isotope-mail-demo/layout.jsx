@@ -5,12 +5,12 @@ import {
   Button,
   Container,
   CssBaseline,
-  Toolbar
-} from '@material-ui/core';
-import Typography from '@material-ui/core/Typography';
+  ThemeProvider,
+  Toolbar,
+  Typography
+} from '@mui/material';
 import {injectIntl} from 'react-intl';
 import {Link} from 'gatsby';
-import {ThemeProvider} from '@material-ui/styles';
 import isotopeLogo from './assets/isotope-logo-white-64.png';
 import {localizedPath} from '../i18n/path';
 import {lightTheme} from '../styles';

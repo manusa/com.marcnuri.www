@@ -1,0 +1,31 @@
+@import '../base/variables';
+
+$title-height: $header-height * 5;
+.base64 {
+  $self: &;
+  background: $color-blue;
+  color: $color-blue-darkest;
+
+  & &__title {
+    margin: 0;
+    color: white;
+    background: url('../assets/numbers-low.jpg') no-repeat center center;
+    background-size: cover;
+    & #{$self}__title-filter {
+      display: flex;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.4);
+      height: $title-height;
+      & #{$self}__title-text {
+        margin: 0;
+        padding: 0 $base-padding;
+      }
+    }
+  }
+  & &__form {
+    padding: $base-padding;
+  }
+  & &__about {
+    padding: $base-padding;
+  }
+}

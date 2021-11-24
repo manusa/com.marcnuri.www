@@ -21,10 +21,13 @@ const FooterWithMetadata = ({data, pageContext}) => (
         <li><Link to={localizedPath(pageContext.locale)('/scrum-poker-online')}>
           Scrum Poker
         </Link></li>
-        <li><a href={'https://www.marcnuri.com/adr-online'}>ADR Online</a></li>
         <li><Link to={localizedPath(pageContext.locale)('/uuid')}>
           UUID
         </Link></li>
+        <li><Link to={localizedPath(pageContext.locale)('/base64-encoder-decoder')}>
+          Base64
+        </Link></li>
+        <li><a href={'https://www.marcnuri.com/adr-online'}>ADR Online</a></li>
         <li><a href={'https://www.marcnuri.com/iban'}>IBAN</a></li>
       </ul>
     </div>

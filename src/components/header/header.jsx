@@ -41,5 +41,4 @@ Header.propTypes = {
   scrolled: PropTypes.bool.isRequired
 };
 
-
 export default Header;
