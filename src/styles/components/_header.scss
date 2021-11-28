@@ -47,7 +47,7 @@ $scrolled-color: #333;
       @at-root #{$self}--scrolled#{$parent} {
         opacity: 0;
         margin-right: -0.5em;
-        font-family: 'Inconsolata';
+        font-family: $font-inconsolata;
         font-weight: normal;
       }
     }
