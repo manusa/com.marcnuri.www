@@ -102,6 +102,9 @@ class Home extends React.Component {
           <ReactMarkdown
             className={'home__avatar-section-content'}
             children={ABOUT_CONTENT[pageContext.lang]}
+            components={{
+              a: ExternalLink
+            }}
           />
         </section>
         <section className='home__section home__blog'>
@@ -113,7 +116,6 @@ class Home extends React.Component {
           <ReactMarkdown
             className={'home__avatar-section-content'}
             children={CONTACT_CONTENT[pageContext.lang]}
-            linkTarget="_blank"
             components={{
               a: ExternalLink
             }}
