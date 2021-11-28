@@ -16,6 +16,7 @@ import locales from '../../i18n/locales';
 import {localizedPath} from '../../i18n/path';
 import '../../styles/main.scss';
 import '../../styles/pages/home.scss';
+import BlogEntries from './blog-entries';
 
 const ABOUT_CONTENT = {
   en: aboutEn,
@@ -102,6 +103,9 @@ class Home extends React.Component {
             className={'home__avatar-section-content'}
             children={ABOUT_CONTENT[pageContext.lang]}
           />
+        </section>
+        <section className='home__section home__blog'>
+          <BlogEntries lang={pageContext.lang} />
         </section>
         <section className={'home__section home__avatar-section home__contact'}>
           <Avatar alt={intl.formatMessage({id: 'home.title'})} face={faceWithLaptop}/>

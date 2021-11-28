@@ -1,11 +1,19 @@
 // Fonts
+$font-inconsolata: 'Inconsolata', monospace;
+$font-montserrat: 'Montserrat', Arial, sans-serif;
+$font-poppins: 'Poppins', sans-serif;
 $header-font-size: 1.3rem;
-$header-font-family: 'Montserrat';
+$header-font-family: $font-montserrat;
 $header-font-weight: 600;
 
 // Colors
 $color-green: #7ea896;
-$color-blue-light: #f5fcff;
+$color-green-dark: #63927e;
+$color-green-darker: #3a5549;
+$color-green-darkest: #21312a;
+$color-blue-lightest: #f5fcff;
+$color-blue-lighter: #bfe0ed;
+$color-blue-light: #9fd0e5;
 $color-blue: #78bcda;
 $color-blue-dark: #649bb7;
 $color-blue-darker: #3c5e6d;
@@ -14,12 +22,16 @@ $color-red: #da4436;
 
 
 // Responsive
-$responsive-breakpoint-tablet-min: 600px;
+$default-spacing: 16px;
+$max-content-width: 996px;
+$responsive-breakpoint-phone-min: 600px;
+$responsive-breakpoint-tablet-min: 768px;
+$responsive-breakpoint-desktop-min: 980px;
 
 // Base
 $base-background-color: #d9dadb;
 $base-font-size: 16px;
-$base-font-family: 'Montserrat', Arial, sans-serif;
+$base-font-family: $font-montserrat;
 $base-padding: 16px;
 $header-padding: 16px;
 $header-height: 48px;

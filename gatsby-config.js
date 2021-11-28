@@ -17,6 +17,7 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
+    'gatsby-plugin-material-ui',
     {
       resolve: 'gatsby-plugin-google-analytics-gtag',
       options: {
@@ -47,6 +48,42 @@ module.exports = {
         icon: 'src/components/avatar/face-512-t.png'
       }
     },
-    'gatsby-plugin-material-ui'
+    {
+      resolve: 'gatsby-source-rss-feed',
+      options: {
+        url: 'https://blog.marcnuri.com/feed.xml',
+        name: 'BlogMarcNuriCom'
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-remote-images',
+      options: {
+        nodeType: 'FeedBlogMarcNuriCom',
+        imagePath: 'enclosure.url'
+      }
+    },
+    {
+      resolve: 'gatsby-source-rss-feed',
+      options: {
+        url: 'https://blog.marcnuri.com/es/feed.xml',
+        name: 'BlogMarcNuriComEs'
+      }
+    },
+    {
+      resolve: 'gatsby-plugin-remote-images',
+      options: {
+        nodeType: 'FeedBlogMarcNuriComEs',
+        imagePath: 'enclosure.url'
+      }
+    },
+    'gatsby-plugin-image',
+    {
+      resolve: 'gatsby-plugin-sharp',
+      options: {
+        defaultQuality: 90,
+        failOnError: true
+      }
+    },
+    'gatsby-transformer-sharp'
   ]
 };

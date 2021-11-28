@@ -1,11 +1,13 @@
 @import '../base/variables';
+@import '../components/blog-entries';
 
-$default-spacing: 16px;
-$about-background: $color-blue;
-$about-padding: 32px;
-$about-spacing: $default-spacing;
 $avatar-size: 150px;
 $avatar-background: $color-blue-dark;
+$blog-background: $color-blue-lighter;
+$blog-padding: $default-spacing * 2;
+$about-background: $color-blue;
+$about-padding: $default-spacing * 2;
+$about-spacing: $default-spacing;
 
 
 .home {
@@ -78,7 +80,7 @@ $avatar-background: $color-blue-dark;
     }
 
     & #{$self}__cover-hello {
-      font-family: 'Poppins';
+      font-family: $font-poppins;
       padding: 0;
       margin: 0;
       color: white;
@@ -142,7 +144,7 @@ $avatar-background: $color-blue-dark;
     padding: $about-padding 0;
     height: auto;
     color: $color-blue-darkest;
-    font-family: 'Montserrat';
+    font-family: $font-montserrat;
     font-size: 1rem;
     line-height: 1.5rem;
 
@@ -169,7 +171,7 @@ $avatar-background: $color-blue-dark;
       text-align: center;
     }
     & #{$self}__avatar-section-content {
-      max-width: 996px;
+      max-width: $max-content-width;
       margin: 0 auto;
       padding: 0 $about-padding;
       text-align: justify;
@@ -189,6 +191,16 @@ $avatar-background: $color-blue-dark;
   }
   & &__about {
     padding-top: #{$about-padding + $header-height};
+  }
+  & &__blog {
+    background: $blog-background;
+    padding: $blog-padding 0;
+    height: auto;
+    .blog-entries {
+      max-width: $max-content-width;
+      padding: 0 $blog-padding;
+      margin: 0 auto;
+    }
   }
   & &__contact {
     .avatar {

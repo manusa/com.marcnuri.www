@@ -19,7 +19,7 @@ const CONTENT = {
   es: base64Es
 };
 
-const Base64 = ({pageContext, intl, classes}) => {
+const Base64 = ({pageContext, intl}) => {
   const title = intl.formatMessage({id: 'base64.title'});
   const [{formValues}, setState] = useState({formValues: {input: '', output: ''}});
   const onFieldChange = event => {

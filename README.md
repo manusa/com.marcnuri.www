@@ -9,6 +9,7 @@
 - [Samy Kamkar](https://samy.pl/)
 - [Sindre Sorhus](https://sindresorhus.com/)
 - [Max Stoiber](https://mxstbr.com/)
+- [Adrián Bolonio](https://www.adrianbolonio.com/en/)
 
 ### Images
 

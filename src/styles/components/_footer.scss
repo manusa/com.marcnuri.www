@@ -6,7 +6,7 @@ $spacing: 12px;
 .footer {
   padding: $footer-padding;
   background: $footer-background;
-  font-family: 'Montserrat';
+  font-family: $font-montserrat;
   & &__locale {
     margin-bottom: $spacing;
     font-size: 0.75rem;
