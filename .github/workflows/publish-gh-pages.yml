@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - master
+  schedule:
+    - cron: '0 */6 * * *' # Every 6 hours
 
 jobs:
   test-publish:
