@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @import '../base/variables';
 
 $title-height: $header-height * 4;
@@ -9,8 +11,8 @@ $poker-background-color: #0b2853;
   position: absolute;
   top: $margin;
   bottom: $margin;
-  left: $margin * $poker-aspect-ratio/100%;
-  right: $margin * $poker-aspect-ratio/100%;
+  left: math.div($margin * $poker-aspect-ratio, 100%);
+  right: math.div($margin * $poker-aspect-ratio, 100%);
   border-radius: $poker-border-radius * 0.1;
 }
 

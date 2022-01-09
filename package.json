@@ -73,7 +73,7 @@
     "eslint-plugin-jest": "^25.3.4",
     "eslint-plugin-react": "^7.28.0",
     "jest": "^27.4.7",
-    "node-sass": "^6.0.1",
+    "sass": "^1.47.0",
     "prop-types": "^15.8.1"
   }
 }

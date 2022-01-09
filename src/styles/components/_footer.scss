@@ -19,7 +19,7 @@ $spacing: 12px;
       &:not(:first-child) {
         &::before {
           content: '|';
-          margin: 0 $spacing / 2;
+          margin: 0 $spacing * 0.5;
         }
       }
     }
@@ -33,7 +33,7 @@ $spacing: 12px;
       justify-content: center;
     }
     li {
-      margin: $spacing / 2;
+      margin: $spacing * 0.5;
     }
   }
   & &__copyright {

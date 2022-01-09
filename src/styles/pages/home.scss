@@ -132,7 +132,7 @@ $about-spacing: $default-spacing;
         &:not(:first-child) {
           &::before {
             content: '|';
-            margin: 0 $default-spacing / 2;
+            margin: 0 $default-spacing * 0.5;
           }
         }
       }

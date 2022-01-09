@@ -1,3 +1,5 @@
+@use "sass:math";
+
 @import '../base/variables';
 
 $section-spacing: $default-spacing * 2;
@@ -5,7 +7,7 @@ $link-color: $color-blue-darkest;
 $link-box-shadow: $color-blue-darkest 0 2px 0 0;
 $figure-phone-max-width: 100%;
 $figure-max-width: 370px;
-$figure-max-height: $figure-max-width / 16 * 9;
+$figure-max-height: math.div($figure-max-width, 16) * 9;
 $entry-title-font-size: 1.5rem;
 $entry-title-color: $color-blue-darkest;
 $entry-title-box-shadow: $color-blue-darkest 0 2px 0 0;
