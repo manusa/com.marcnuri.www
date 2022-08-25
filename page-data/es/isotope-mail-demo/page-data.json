@@ -1,5 +1,1 @@
-{
-    "componentChunkName": "component---src-pages-isotope-mail-demo-index-jsx",
-    "path": "/es/isotope-mail-demo/",
-    "result": {"pageContext":{"locale":{"path":"es","name":"Español","language":"es","default":false},"lang":"es","pagePath":"/isotope-mail-demo/","localizedPath":"/es/isotope-mail-demo/"}},
-    "staticQueryHashes": ["3514990218"]}
+{"componentChunkName":"component---src-pages-isotope-mail-demo-index-jsx","path":"/es/isotope-mail-demo/","result":{"pageContext":{"locale":{"path":"es","name":"Español","language":"es","default":false},"lang":"es","pagePath":"/isotope-mail-demo/","localizedPath":"/es/isotope-mail-demo/"}},"staticQueryHashes":["3514990218"]}
