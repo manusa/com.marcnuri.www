@@ -3,11 +3,9 @@ import {FormattedMessage, injectIntl} from 'react-intl';
 import {Link} from 'gatsby';
 import ReactMarkdown from 'react-markdown';
 import Avatar from '../avatar/avatar';
-import face512 from '../avatar/face-512.png';
 import faceWithLaptop from '../avatar/face-laptop.png';
 import ExternalLink from '../external-link';
 import Layout from '../layout';
-import Seo from '../seo/seo';
 import aboutEn from 'raw-loader!./about.en.md';
 import aboutEs from 'raw-loader!./about.es.md';
 import contactEn from 'raw-loader!./contact.en.md';
@@ -67,17 +65,6 @@ class Home extends React.Component {
     const {coverClassName} = this.state;
     return (
       <Layout className={'home'} pageContext={pageContext}>
-        <Seo
-          pageContext={pageContext}
-          lang={pageContext.lang}
-          title={`${
-            intl.formatMessage({id: 'home.title'})
-          }, ${
-            intl.formatMessage({id: 'home.subtitle'})
-          }`}
-          description={intl.formatMessage({id: 'global.meta.description'})}
-          image={face512}
-        />
         <section className={`home__section home__cover ${coverClassName}`}>
           <div className={'home__cover-filter'}>
             <h3 className={'home__cover-hello'}>

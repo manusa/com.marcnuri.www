@@ -2,7 +2,6 @@ import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import {injectIntl} from 'react-intl';
 import Layout from './layout';
-import Seo from '../components/seo/seo';
 import isotopeMailDemoEn from 'raw-loader!./isotope-mail-demo.en.md';
 import isotopeLogo from './assets/isotope-logo.jpg';
 import isotopeLogoH from './assets/isotope-logo-h.png';
@@ -13,15 +12,8 @@ const imageMap = {
   isotopeLogoH
 };
 
-const IsotopeMailDemo = ({pageContext, intl}) => (
+const IsotopeMailDemo = ({pageContext}) => (
   <Layout pageContext={pageContext}>
-    <Seo
-      pageContext={pageContext}
-      lang={pageContext.lang}
-      title={intl.formatMessage({id: 'isotopeMailDemo.title'})}
-      description={intl.formatMessage({id: 'isotopeMailDemo.privacyPolicy.description'})}
-      image={isotopeLogo}
-    />
     <ReactMarkdown
       children={isotopeMailDemoEn}
       linkTarget="_blank"

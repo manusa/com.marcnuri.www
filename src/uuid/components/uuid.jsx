@@ -3,10 +3,8 @@ import {injectIntl} from 'react-intl';
 import ReactMarkdown from 'react-markdown';
 import {Paper, ThemeProvider} from '@mui/material';
 import Form from './form';
-import face512 from '../../components/avatar/face-512.png';
 import ExternalLink from '../../components/external-link';
 import Layout from '../../components/layout';
-import Seo from '../../components/seo/seo';
 import uuidEn from 'raw-loader!./uuid.en.md';
 import uuidEs from 'raw-loader!./uuid.es.md';
 import {
@@ -102,13 +100,6 @@ class Uuid extends React.Component {
     return (
       <ThemeProvider theme={darkTheme}>
         <Layout className="uuid" pageContext={pageContext}>
-          <Seo
-            pageContext={pageContext}
-            lang={pageContext.lang}
-            title={title}
-            description={intl.formatMessage({id: 'uuid.meta.description'})}
-            image={face512}
-          />
           <div className={'uuid__title'}>
             <div className={'uuid__title-filter'}>
               <h1 className={'uuid__title-text'}>{title}</h1>

@@ -4,8 +4,6 @@ import {Paper, ThemeProvider} from '@mui/material';
 import ReactMarkdown from 'react-markdown';
 import {encode, decode} from 'js-base64';
 import Layout from '../../components/layout';
-import Seo from '../../components/seo/seo';
-import face512 from '../../components/avatar/face-512.png';
 import Form from './form';
 import ExternalLink from '../../components/external-link';
 import base64En from 'raw-loader!./base64.en.md';
@@ -32,13 +30,6 @@ const Base64 = ({pageContext, intl}) => {
   return (
     <ThemeProvider theme={darkTheme}>
       <Layout className="base64" pageContext={pageContext}>
-        <Seo
-          pageContext={pageContext}
-          lang={pageContext.lang}
-          title={title}
-          description={intl.formatMessage({id: 'base64.meta.description'})}
-          image={face512}
-        />
         <div className={'base64__title'}>
           <div className={'base64__title-filter'}>
             <h1 className={'base64__title-text'}>{title}</h1>

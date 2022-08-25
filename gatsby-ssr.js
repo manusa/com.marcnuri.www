@@ -20,3 +20,12 @@ exports.onPreRenderHTML = ({
   replaceHeadComponents([<Kapo />, <SearchConsoleVerification />, ...getHeadComponents()]);
   replacePostBodyComponents([<FostoKorpo />, ...getPostBodyComponents()]);
 };
+
+exports.onRenderBody = ({pathname, setHtmlAttributes, loadPageDataSync}) => {
+  if (process.env.NODE_ENV !== 'development') {
+    const {
+      result: {pageContext: {lang}}
+    } = loadPageDataSync(pathname);
+    setHtmlAttributes({lang});
+  }
+};

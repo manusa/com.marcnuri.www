@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {StaticQuery, graphql} from 'gatsby';
-import {Helmet} from 'react-helmet';
+import {graphql, useStaticQuery} from 'gatsby';
 import values from 'lodash/values';
-import locales from '../../i18n/locales';
-import {localizedPath} from '../../i18n/path';
+import locales from '../i18n/locales';
+import {localizedPath} from '../i18n/path';
 
 const SeoWithMetadata = ({data, lang, title, description, image, pageContext}) => {
   const {site: {siteMetadata}} = data;
@@ -21,9 +20,8 @@ const SeoWithMetadata = ({data, lang, title, description, image, pageContext}) =
   ];
   const imageUrl = image && `${siteMetadata.siteUrl}${image}`;
   return (
-    <Helmet>
+    <>
       <meta charSet="UTF-8" />
-      <html lang={lang} />
       <title>{title}</title>
       <meta name="description" content={description} />
       {imageUrl && (<meta name="image" content={imageUrl} />)}
@@ -31,7 +29,7 @@ const SeoWithMetadata = ({data, lang, title, description, image, pageContext}) =
         (<link
           key={locale.path}
           rel="alternate"
-          hreflang={locale.language}
+          hrefLang={locale.language}
           href={localizedPath(locale)(pageContext.pagePath)}
         />)
       )}
@@ -51,7 +49,7 @@ const SeoWithMetadata = ({data, lang, title, description, image, pageContext}) =
       <script type="application/ld+json">
         {JSON.stringify(schemaOrgJsonLd)}
       </script>
-    </Helmet>
+    </>
   );
 };
 
@@ -70,14 +68,12 @@ const query = graphql`
   }
 `;
 
-const Seo = props =>
-  <StaticQuery
-    query={query}
-    render={data => <SeoWithMetadata data={data} {...props} />}
-  />;
+export const Seo = props => {
+  const data = useStaticQuery(query);
+  return <SeoWithMetadata data={data} {...props} />;
+};
 
 Seo.propTypes = {
-  lang: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   image: PropTypes.string,
@@ -89,5 +85,3 @@ Seo.propTypes = {
 Seo.defaultProps = {
   image: null
 };
-
-export default Seo;

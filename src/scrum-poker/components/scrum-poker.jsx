@@ -5,7 +5,6 @@ import {injectIntl} from 'react-intl';
 import result from 'lodash/result';
 import ExternalLink from '../../components/external-link';
 import Layout from '../../components/layout';
-import Seo from '../../components/seo/seo';
 import PokerCardBack from './poker-card-back';
 import PokerCardFront from './poker-card-front';
 import shiver from '../shiver';
@@ -65,19 +64,11 @@ class ScrumPoker extends React.Component {
   render() {
     const {pageContext, intl} = this.props;
     const {selectedCard, flipped} = this.state;
-    const title = intl.formatMessage({id: 'scrum.poker.title'});
-    const description = intl.formatMessage({id: 'scrum.poker.meta.description'});
     return (
       <Layout className="scrum-poker" pageContext={pageContext}>
-        <Seo
-          pageContext={pageContext}
-          lang={pageContext.lang}
-          title={title}
-          description={description}
-        />
         <div className={'scrum-poker__title'}>
           <div className={'scrum-poker__title-filter'}>
-            <h1 className={'scrum-poker__title-text'}>{title}</h1>
+            <h1 className={'scrum-poker__title-text'}>{intl.formatMessage({id: 'scrum.poker.title'})}</h1>
           </div>
         </div>
         <section className={'scrum-poker__deck'}>
