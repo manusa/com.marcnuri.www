@@ -1,5 +1,5 @@
 import React from 'react';
-import {StaticQuery, graphql, Link} from 'gatsby';
+import {graphql, Link, useStaticQuery} from 'gatsby';
 import locales from '../../i18n/locales';
 import {localizedPath} from '../../i18n/path';
 import '../../styles/main.scss';
@@ -57,9 +57,9 @@ const query = graphql`
     }
   }
 `;
-const Footer = props =>
-  <StaticQuery
-    query={query}
-    render={data => <FooterWithMetadata data={data} {...props} />}
-  />;
+const Footer = props => {
+  const data = useStaticQuery(query);
+  return <FooterWithMetadata data={data} {...props} />;
+};
+
 export default Footer;
