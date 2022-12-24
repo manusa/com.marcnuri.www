@@ -1,6 +1,7 @@
 const sitemap = require('./sitemap');
 
 module.exports = {
+  trailingSlash: 'never',
   siteMetadata: {
     title: 'Marc Nuri',
     siteUrl: 'https://www.marcnuri.com',
@@ -21,7 +22,8 @@ module.exports = {
       resolve: 'gatsby-plugin-google-analytics-gtag',
       options: {
         trackingId: 'UA-1509094-4',
-        enableLocalStorage: false
+        enableLocalStorage: false,
+        enableSessionStorage: true
       }
     },
     {
