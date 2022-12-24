@@ -41,9 +41,9 @@
   },
   "homepage": "https://github.com/manusa/www.marcnuri.com#readme",
   "dependencies": {
-    "@emotion/react": "11.10.0",
-    "@emotion/styled": "11.10.0",
-    "@mui/material": "5.10.2",
+    "@emotion/react": "11.10.5",
+    "@emotion/styled": "11.10.5",
+    "@mui/material": "5.11.1",
     "clsx": "1.2.1",
     "deepmerge": "4.2.2",
     "gatsby": "4.21.1",
@@ -59,12 +59,12 @@
     "gatsby-source-filesystem": "4.21.1",
     "gatsby-source-rss-feed": "1.2.2",
     "gatsby-transformer-sharp": "4.21.0",
-    "js-base64": "3.7.2",
+    "js-base64": "3.7.3",
     "lodash": "4.17.21",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-intl": "6.0.8",
-    "react-markdown": "8.0.3",
+    "react-intl": "6.2.5",
+    "react-markdown": "8.0.4",
     "whatwg-fetch": "3.6.2"
   },
   "devDependencies": {
