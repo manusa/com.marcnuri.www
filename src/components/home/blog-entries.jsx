@@ -82,7 +82,7 @@ const BlogEntries = ({lang, intl}) => {
                 </h3>
                 <div className={`${baseClass}__entry-meta`}>
                   {shortDate(isoDate)} {categories.map(c =>
-                    <span key={c} class={`${baseClass}__entry-category`}>{`#${c}`}</span>)}
+                    <span key={c} className={`${baseClass}__entry-category`}>{`#${c}`}</span>)}
                 </div>
                 <div className={`${baseClass}__entry-snippet`}>
                   {contentSnippet}
