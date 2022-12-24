@@ -19,7 +19,10 @@ jobs:
         with:
           node-version: '18'
       - name: Install
-        run: npm install
+        # TODO: Remove when
+        #  - gatsby-plugin-material-ui is updated to support v5
+        #  - gatsby-plugin-remote-images is updated to support v5
+        run: npm install --legacy-peer-deps
       - name: Build
         run: npm run build
       - name: Deploy
