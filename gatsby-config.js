@@ -5,7 +5,7 @@ module.exports = {
   siteMetadata: {
     title: 'Marc Nuri',
     siteUrl: 'https://www.marcnuri.com',
-    year: 2021,
+    year: 2022,
     description: 'I craft code',
     author: 'Marc Nuri',
     social: {
