@@ -17,8 +17,8 @@ exports.onPreRenderHTML = ({
   getHeadComponents, replaceHeadComponents,
   getPostBodyComponents, replacePostBodyComponents
 }) => {
-  replaceHeadComponents([<Kapo />, <SearchConsoleVerification />, ...getHeadComponents()]);
-  replacePostBodyComponents([<FostoKorpo />, ...getPostBodyComponents()]);
+  replaceHeadComponents([<Kapo key='kapo' />, <SearchConsoleVerification key='seach' />, ...getHeadComponents()]);
+  replacePostBodyComponents([<FostoKorpo key='fosto-corpo' />, ...getPostBodyComponents()]);
 };
 
 exports.onRenderBody = ({pathname, setHtmlAttributes, loadPageDataSync}) => {
