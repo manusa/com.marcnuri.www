@@ -17,7 +17,7 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-sass',
-    'gatsby-plugin-material-ui',
+    '@marcnuri/gatsby-plugin-material-ui',
     {
       resolve: 'gatsby-plugin-google-analytics-gtag',
       options: {
