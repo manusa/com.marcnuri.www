@@ -15,16 +15,19 @@ const Header = ({pageContext, scrolled}) => (
           url={'https://www.linkedin.com/in/marcnuri'}
           icon={'icon-linkedin'}
           title={'LinkedIn'}
+          rel={'me noopener'}
         />
         <IconItem
-          url={'https://www.github.com/manusa'}
+          url={'https://github.com/manusa'}
           icon={'icon-github-circled'}
           title={'GitHub'}
+          rel={'me noopener'}
         />
         <IconItem
-          url={'https://www.twitter.com/MarcNuri'}
+          url={'https://x.com/MarcNuri'}
           icon={'icon-twitter'}
-          title={'Twitter'}
+          title={'X'}
+          rel={'me noopener'}
         />
         <IconItem
           url={'https://blog.marcnuri.com'}

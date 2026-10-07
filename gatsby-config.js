@@ -5,7 +5,8 @@ module.exports = {
   siteMetadata: {
     title: 'Marc Nuri',
     siteUrl: 'https://www.marcnuri.com',
-    year: 2022,
+    // The footer copyright year: the site builds every 6 hours (publish-gh-pages.yml), so it stays current
+    year: new Date().getFullYear(),
     description: 'I craft code',
     author: 'Marc Nuri',
     social: {
@@ -18,14 +19,6 @@ module.exports = {
   plugins: [
     'gatsby-plugin-sass',
     '@marcnuri/gatsby-plugin-material-ui',
-    {
-      resolve: 'gatsby-plugin-google-analytics-gtag',
-      options: {
-        trackingId: 'UA-1509094-4',
-        enableLocalStorage: false,
-        enableSessionStorage: true
-      }
-    },
     {
       resolve: 'gatsby-plugin-sitemap',
       options: {

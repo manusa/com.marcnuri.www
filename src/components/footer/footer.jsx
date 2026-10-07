@@ -33,9 +33,12 @@ const FooterWithMetadata = ({data, pageContext}) => (
     </div>
     <div className={'footer__social'}>
       <ul>
-        <li><a href={'https://www.linkedin.com/in/marcnuri'} rel="noreferrer">LinkedIn</a></li>
-        <li><a href={'https://www.github.com/manusa'} rel="noreferrer">GitHub</a></li>
-        <li><a href={'https://www.twitter.com/MarcNuri'} rel="noreferrer">Twitter</a></li>
+        {/* rel="me": each profile can verify that this site links back to it */}
+        <li><a href={'https://www.linkedin.com/in/marcnuri'} rel="me noreferrer">LinkedIn</a></li>
+        <li><a href={'https://github.com/manusa'} rel="me noreferrer">GitHub</a></li>
+        <li><a href={'https://bsky.app/profile/marcnuri.com'} rel="me noreferrer">Bluesky</a></li>
+        <li><a href={'https://x.com/MarcNuri'} rel="me noreferrer">X</a></li>
+        <li><a href={'https://www.youtube.com/@MarcNuri'} rel="me noreferrer">YouTube</a></li>
         <li><a href={'https://blog.marcnuri.com'} rel="noreferrer">Blog</a></li>
         <li><a href={'https://presentations.marcnuri.com'} rel="noreferrer">Talks</a></li>
       </ul>
