@@ -1,14 +1,14 @@
-Soy un desarrollador de software trabajando desde Valencia, España.
-Me apasiona construir aplicaciones web y llevo haciéndolo de forma profesional desde hace más de 15 
-años.
+Soy Senior Principal Software Engineer en Red Hat y vivo en Valencia, España.
+Creo y protejo el software libre y de código abierto (FOSS) del que dependen los desarrolladores y los agentes de IA,
+y llevo más de 15 años desarrollando software de forma profesional.
 
-En estos momentos estoy trabajando como Senior Principal software developer para Red Hat, donde me centro
-en construir herramientas libres y de código abierto en la intersección entre Kubernetes y la IA.
-Lidero
+Creé el
 [Kubernetes MCP Server](https://github.com/containers/kubernetes-mcp-server "Servidor Model Context Protocol para Kubernetes y OpenShift"),
-un servidor del Model Context Protocol que permite a los agentes de IA gestionar clústeres de Kubernetes y OpenShift, y continúo manteniendo
-[Eclipse JKube](https://github.com/eclipse/jkube "Plugins Java de Maven y Gradle para Kubernetes") y
-[Fabric8 Kubernetes Client](https://github.com/fabric8io/kubernetes-client "Cliente Java para Kubernetes").
+un servidor del Model Context Protocol que permite a los agentes de IA gestionar clústeres de Kubernetes y OpenShift, y soy el mantenedor principal de
+[Fabric8 Kubernetes Client](https://github.com/fabric8io/kubernetes-client "Cliente Java para Kubernetes") y
+[Eclipse JKube](https://github.com/eclipse-jkube/jkube "Plugins Java de Maven y Gradle para Kubernetes").
+También trabajo en la seguridad de la cadena de suministro de software: cómo los agentes de IA y los ingenieros pueden encontrar,
+corregir y verificar vulnerabilidades en librerías de código abierto a gran escala.
 
-Cuándo no estoy programando me gusta pasar tiempo con mi familia y amigos. También puede que me 
+Cuando no estoy programando me gusta pasar tiempo con mi familia y amigos. También puede que me
 encuentres corriendo libremente por las montañas.

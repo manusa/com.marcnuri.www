@@ -1,7 +1,9 @@
-Are you interested in working together? Are you working in an interesting project and maybe I can
+Are you interested in working together? Are you working on an interesting project and maybe I can
 help you with something?
 
-Please use any of my social networks
-([Twitter](https://twitter.com/MarcNuri "Marc Nuri's Twitter Profile"), 
-[LinkedIn](https://www.linkedin.com/in/marcnuri/ "Marc Nuri's LinkedIn Profile")...) 
-to private message me and I'll get in contact with you.
+The best way to reach me is a direct message on
+[LinkedIn](https://www.linkedin.com/in/marcnuri/ "Marc Nuri's LinkedIn Profile").
+You can also find me on
+[GitHub](https://github.com/manusa "Marc Nuri's GitHub Profile"),
+[Bluesky](https://bsky.app/profile/marcnuri.com "Marc Nuri's Bluesky Profile") and
+[X](https://x.com/MarcNuri "Marc Nuri's X Profile").
