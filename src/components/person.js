@@ -45,7 +45,8 @@ export const person = {
     'https://developers.redhat.com/author/marc-nuri',
     'https://www.redhat.com/en/authors/marc-nuri',
     'https://accounts.eclipse.org/users/mnuri',
-    'https://scholar.google.com/citations?user=JL7-bbYAAAAJ'
+    'https://scholar.google.com/citations?user=JL7-bbYAAAAJ',
+    'https://orcid.org/0009-0002-8764-6041'
   ]
 };
 
